@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"><title>Corey's TEAS Prep v4.0</title>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"><title>Corey's TEAS Prep v5.0</title>
 <style>*{margin:0;padding:0;box-sizing:border-box}body{background:#0d0d0f;color:#e0e0e0;font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}#root{max-width:620px;margin:0 auto;padding:12px 12px 32px}button{font-family:inherit;cursor:pointer}button:disabled{opacity:.5}.card{background:#141418;border-radius:12px;padding:14px 12px;border:1px solid #1e1e22}.btn{background:#4F9CF7;color:#fff;border:none;border-radius:8px;padding:9px 16px;font-size:12px;font-weight:600}.btn2{background:0 0;color:#888;border:1px solid #333;border-radius:8px;padding:9px 16px;font-size:12px;font-weight:600}.back{background:0 0;border:none;color:#888;font-size:12px;padding:4px 0;margin-bottom:3px}.title{text-align:center;font-size:22px;font-weight:800;margin:0 0 3px}.hero{font-size:30px;font-weight:800;background:linear-gradient(135deg,#4F9CF7,#A94FF7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0}.pick{display:flex;align-items:center;gap:9px;padding:11px;background:#141418;border:1px solid #333;border-radius:10px;width:100%}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-bottom:14px}.mcard{display:flex;flex-direction:column;align-items:center;gap:4px;padding:18px 10px;background:#141418;border:1px solid;border-radius:12px;text-align:center}.bar-out{height:6px;background:#222;border-radius:3px;overflow:hidden;width:100%}.bar-in{height:100%;border-radius:3px;transition:width .6s}.opt{display:flex;align-items:center;gap:9px;padding:10px 11px;border:1px solid #333;border-radius:8px;width:100%;font-size:13px;text-align:left;line-height:1.4;background:0 0;color:#e0e0e0;transition:all .15s}.prog{height:3px;background:#222;border-radius:2px;margin-bottom:12px;overflow:hidden}.prog-in{height:100%;border-radius:2px;transition:width .3s}.calc{position:fixed;bottom:12px;right:12px;width:220px;background:#1a1a1e;border-radius:14px;padding:10px;box-shadow:0 8px 32px rgba(0,0,0,.6);z-index:1000;border:1px solid #333}.calc-btn{border-radius:8px;border:none;padding:12px 0;font-size:16px;font-weight:600;color:#fff}.mbar{padding:8px 10px;border-radius:8px;margin-bottom:5px}.sata{display:inline-block;font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;background:#F7A94F22;color:#F7A94F;border:1px solid #F7A94F44;margin-bottom:6px}</style></head>
 <body><div id="root"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
@@ -250,13 +250,47 @@ const QD=[
 [3,"Active & Passive Voice","A nursing instructor asks students to rewrite this passive sentence in active voice: 'The patient's blood pressure was measured by the nursing student every four hours.' Which revision is correct?",["Blood pressure measurement was performed every four hours.","Every four hours, blood pressure was being measured.","The nursing student measured the patient's blood pressure every four hours.","Measuring blood pressure every four hours was done."],2,"Active voice: subject (nursing student) performs the action (measured) on the object (blood pressure). All other options remain passive or awkward."],
 [3,"Active & Passive Voice","In clinical documentation, which sentence uses ACTIVE voice?",["The medication was administered by the nurse at 0800.","The incision was examined by the surgeon during morning rounds.","The respiratory therapist adjusted the ventilator settings at 1400.","The lab specimens were collected by the phlebotomist before breakfast."],2,"Subject (respiratory therapist) performs the action (adjusted). All other sentences have the subject receiving the action ('was administered by,' 'was examined by,' 'were collected by')."],
 [3,"Active & Passive Voice","A professor comments that a student's paper overuses passive voice. Which of the following sentences should the student revise?",["The research team analyzed data from 500 participants.","The hospital implemented a new fall prevention protocol.","Significant improvement was observed in the treatment group over the 12-week period.","The nurse educated the patient about wound care before discharge."],2,"'Significant improvement was observed' is passive — who observed it? Should be: 'The researchers observed significant improvement...' The other sentences all use active voice with clear subjects performing actions."],
+// ═══ FILL IN THE BLANK (type=2) — correctIndex is string or [acceptable answers] ═══
+[1,"Fill in Blank","What is the decimal equivalent of 103%? (Use a leading zero if applicable. Do not use trailing zeros.)",null,["1.03"],"103% = 103/100 = 1.03.",2],
+[1,"Fill in Blank","A patient weighs 154 lbs. Convert to kilograms. Round to the nearest whole number. (1 kg = 2.2 lbs)",null,["70"],"154 ÷ 2.2 = 70 kg.",2],
+[1,"Fill in Blank","Solve for x: 5x - 8 = 27. x = ___",null,["7"],"5x = 35, x = 7.",2],
+[1,"Fill in Blank","Convert 3/8 to a decimal. Do not use trailing zeros.",null,["0.375"],"3 ÷ 8 = 0.375.",2],
+[1,"Fill in Blank","A nurse must give 1.5 grams of a medication. How many milligrams is this? ___ mg",null,["1500","1,500"],"1.5 × 1000 = 1500 mg.",2],
+[1,"Fill in Blank","What is 40% of 250? ___",null,["100"],"0.40 × 250 = 100.",2],
+[1,"Fill in Blank","A patient's temperature is 38.5°C. Convert to Fahrenheit. Round to one decimal place. F = C × 9/5 + 32",null,["101.3"],"38.5 × 1.8 + 32 = 69.3 + 32 = 101.3°F.",2],
+[1,"Fill in Blank","A medication order reads 0.25 mg. Convert to micrograms (mcg). ___ mcg",null,["250"],"0.25 mg × 1000 = 250 mcg.",2],
+[1,"Fill in Blank","A bag of 250 mL NS infuses over 4 hours. What is the rate in mL/hr? ___",null,["62.5"],"250 ÷ 4 = 62.5 mL/hr.",2],
+[1,"Fill in Blank","What is the median of: 12, 18, 22, 25, 31? ___",null,["22"],"Odd number of values — middle value is 22.",2],
+[2,"Fill in Blank","How many chromosomes are in a human gamete (sperm or egg cell)? ___",null,["23"],"Gametes are haploid (n = 23). Somatic cells are diploid (2n = 46).",2],
+[2,"Fill in Blank","In the equation 2H₂ + O₂ → 2H₂O, the coefficient for oxygen is ___.",null,["1"],"O₂ has an implied coefficient of 1.",2],
+[2,"Fill in Blank","Normal blood pH range is 7.35 to ___.",null,["7.45"],"Normal arterial blood pH: 7.35 - 7.45.",2],
+// ═══ ORDERED RESPONSE (type=3) — options are items, correctIndex is correct sequence of indices ═══
+[2,"Ordered Response","Place the steps of the scientific method in the correct order:",["Form a hypothesis","Analyze results and draw conclusions","Make an observation and ask a question","Design and conduct an experiment"],[2,0,3,1],"Observe → Hypothesize → Experiment → Analyze. The scientific method starts with observation, not hypothesis.",3],
+[2,"Ordered Response","Arrange the levels of biological organization from SMALLEST to LARGEST:",["Organ","Tissue","Cell","Organ system"],[2,1,0,3],"Cell → Tissue → Organ → Organ system.",3],
+[2,"Ordered Response","Place the phases of mitosis in the correct order:",["Anaphase","Telophase","Metaphase","Prophase"],[3,2,0,1],"Prophase → Metaphase → Anaphase → Telophase (PMAT).",3],
+[2,"Ordered Response","Arrange the path of blood through the heart in the correct order:",["Left ventricle → aorta → body","Right ventricle → pulmonary artery → lungs","Pulmonary veins → left atrium","Vena cava → right atrium"],[3,1,2,0],"Vena cava → R. atrium → R. ventricle → lungs → pulmonary veins → L. atrium → L. ventricle → aorta → body.",3],
+[2,"Ordered Response","Place the steps for balancing a chemical equation in the correct order:",["Multiply coefficients until atoms are equal on both sides","Check your work by recounting atoms on both sides","Count the number of atoms on each side of the equation"],[2,0,1],"Count atoms → Adjust coefficients → Verify. You can't balance what you haven't counted.",3],
+[2,"Ordered Response","Arrange the digestive tract structures in the order food passes through them:",["Small intestine","Stomach","Large intestine","Esophagus"],[3,1,0,2],"Esophagus → Stomach → Small intestine → Large intestine.",3],
+[2,"Ordered Response","Order the stages of wound healing from first to last:",["Remodeling (maturation)","Proliferation (new tissue growth)","Hemostasis (bleeding stops)","Inflammation"],[2,3,1,0],"Hemostasis → Inflammation → Proliferation → Remodeling.",3],
+[1,"Ordered Response","Place these metric units from SMALLEST to LARGEST:",["Centimeter","Millimeter","Kilometer","Meter"],[1,0,3,2],"Millimeter → Centimeter → Meter → Kilometer.",3],
+[0,"Ordered Response","A patient is admitted to the hospital. Place the nursing process steps in the correct order:",["Plan interventions","Implement the care plan","Assess the patient","Evaluate outcomes","Establish nursing diagnoses"],[2,4,0,1,3],"Assess → Diagnose → Plan → Implement → Evaluate (ADPIE).",3],
+[3,"Ordered Response","Place the stages of the writing process in the correct order:",["Editing and proofreading","Drafting","Prewriting and outlining","Revising for content and structure","Publishing or submitting"],[2,1,3,0,4],"Prewrite → Draft → Revise → Edit → Publish.",3],
+// ═══ ADDITIONAL SATA ═══
+[2,"SATA - Macromolecules","Which of the following are classified as macromolecules found in living organisms? Select all that apply.",["Carbohydrates","Water","Proteins","Nucleic acids","Sodium chloride","Lipids"],[0,2,3,5],"The four macromolecules are carbohydrates, proteins, nucleic acids, and lipids. Water and NaCl are not macromolecules.",1],
+[2,"SATA - Cell Division","Which of the following are TRUE about meiosis but NOT mitosis? Select all that apply.",["Results in 4 daughter cells","Involves crossing over in Prophase I","Produces diploid cells","Homologous chromosomes separate","Produces genetically identical cells"],[0,1,3],"Meiosis: 4 cells, crossing over, homologs separate. Mitosis: 2 identical diploid cells.",1],
+[2,"SATA - Endocrine","Which hormones are produced by the anterior pituitary gland? Select all that apply.",["Growth hormone (GH)","Antidiuretic hormone (ADH)","Thyroid-stimulating hormone (TSH)","Oxytocin","Prolactin","Follicle-stimulating hormone (FSH)"],[0,2,4,5],"Anterior: GH, TSH, Prolactin, FSH (also ACTH, LH). Posterior: ADH and Oxytocin.",1],
+[2,"SATA - Chemistry","Which of the following are properties of acids? Select all that apply.",["pH below 7","Feel slippery","Taste sour","Turn blue litmus paper red","Produce OH⁻ ions in water"],[0,2,3],"Acids: pH<7, sour, turn blue litmus red. Bases: slippery, produce OH⁻.",1],
+[0,"SATA - Reading","Which of the following are examples of PRIMARY sources? Select all that apply.",["A patient's own medical chart with nurse's notes from today","A nursing textbook's chapter on diabetes management","A published original research study by the investigators","A systematic review summarizing 40 clinical trials","An interview transcript with a patient about their experience"],[0,2,4],"Primary = firsthand/original (chart notes, original research, interview). Textbook = tertiary. Systematic review = secondary.",1],
+[3,"SATA - English","Which of the following are examples of prewriting activities? Select all that apply.",["Drawing a mind-map about a topic","Freewriting about childhood memories","Exchanging drafts with colleagues for peer review","Preparing an essay outline","Including citations from multiple sources"],[0,1,3],"Prewriting: mind-mapping, freewriting, outlining. Peer review and citations happen in later stages.",1],
+[3,"SATA - Punctuation","Select ALL correctly punctuated sentences.",["The patient is stable; however, we will continue monitoring.","The physician ordered the following: CBC, BMP, and UA.","Its important to wash hands before patient contact.","The nurse, who was recently certified, managed the code effectively.","The patient's lab results was reviewed by the doctor."],[0,1,3],"'Its' needs apostrophe (it's). Choice E has agreement error (results were). A, B, D are correct.",1],
+[1,"SATA - Math","Which of the following are equivalent to 0.75? Select all that apply.",["3/4","75%","6/8","7/5","15/20"],[0,1,2,4],"3/4=0.75, 75%=0.75, 6/8=3/4=0.75, 15/20=3/4=0.75. 7/5=1.4.",1],
 ];
 
 
-const QS=QD.map((d,i)=>({id:"q"+i,section:SN[d[0]],topic:d[1],question:d[2],options:d[3],correctIndex:d[4],explanation:d[5],sata:d.length>6&&d[6]===1}));
+const QS=QD.map((d,i)=>{const f=d.length>6?d[6]:0;return{id:"q"+i,section:SN[d[0]],topic:d[1],question:d[2],options:d[3],correctIndex:d[4],explanation:d[5],qtype:f===1?"sata":f===2?"fill":f===3?"order":"mc"};});
 function sh(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=0|Math.random()*(i+1);[b[i],b[j]]=[b[j],b[i]];}return b;}
 const DS=()=>({tq:0,tc:0,sec:Object.fromEntries(SN.map(s=>[s,{a:0,c:0,t:{}}])),h:[],sk:0,ld:null});
-const LK="ctv4";function ld(){try{const d=localStorage.getItem(LK);return d?JSON.parse(d):DS();}catch{return DS();}}function sv(s){try{localStorage.setItem(LK,JSON.stringify(s));}catch{}}
+const LK="ctv5";function ld(){try{const d=localStorage.getItem(LK);return d?JSON.parse(d):DS();}catch{return DS();}}function sv(s){try{localStorage.setItem(LK,JSON.stringify(s));}catch{}}
 
 function gm(st){const r=[];SN.forEach(sec=>{[...new Set(QS.filter(q=>q.section===sec).map(q=>q.topic))].forEach(tp=>{const d=st.sec[sec]?.t[tp]||{a:0,c:0};const p=d.a>0?Math.round(d.c/d.a*100):-1;r.push({section:sec,topic:tp,pct:p,asked:d.a,status:d.a===0?"new":p>=85?"strong":p>=70?"ok":"weak"});});});return r;}
 
@@ -277,24 +311,65 @@ const dO=nx=>{const c=parseFloat(d);if(pv!==null&&op&&!fr){let r;switch(op){case
 const B=(l,f,a,dk,w)=>h("button",{className:"calc-btn",onClick:f,style:{gridColumn:w?"span 2":"",backgroundColor:a?"#4F9CF7":dk?"#2a2a2e":"#3a3a3e"}},l);
 return h("div",{className:"calc"},h("div",{style:{display:"flex",justifyContent:"space-between",marginBottom:6}},h("span",{style:{fontSize:11,color:"#888"}},"Calc"),h("button",{onClick:oc,style:{background:"none",border:"none",color:"#888"}},"\u2715")),h("div",{style:{background:"#0d0d0f",borderRadius:6,padding:"8px",textAlign:"right",fontSize:22,fontWeight:700,marginBottom:6,overflow:"hidden"}},d),h("div",{style:{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:3}},B("C",()=>{sD("0");sP(null);sO(null);sF(true);},0,1),B("\u00B1",()=>sD(String(-parseFloat(d))),0,1),B("%",()=>sD(String(parseFloat(d)/100)),0,1),B("\u00F7",()=>dO("\u00F7"),1),B("7",()=>ip("7")),B("8",()=>ip("8")),B("9",()=>ip("9")),B("\u00D7",()=>dO("\u00D7"),1),B("4",()=>ip("4")),B("5",()=>ip("5")),B("6",()=>ip("6")),B("-",()=>dO("-"),1),B("1",()=>ip("1")),B("2",()=>ip("2")),B("3",()=>ip("3")),B("+",()=>dO("+"),1),B("0",()=>ip("0"),0,0,1),B(".",()=>ip(".")),B("=",()=>{if(op){dO(null);sO(null);}},1)));}
 
-// Quiz Engine w/ SATA
+// Quiz Engine — All ATI question types
 function QE({questions:qs,onDone:od,sColor:sc}){
-const[cr,sC]=S(0),[sl,sS]=S(null),[sa,sSA]=S([]),[sw,sSW]=S(false),[rs,sR]=S([]),[cl,sCl]=S(false);
-const q=qs[cr];if(!q)return null;const im=q.section==="Math",is=q.sata,co=sc||SC[q.section];
+const[cr,sC]=S(0),[sl,sS]=S(null),[sa,sSA]=S([]),[sw,sSW]=S(false),[rs,sR]=S([]),[cl,sCl]=S(false),[fi,sFI]=S(""),[ord,sOrd]=S([]);
+const q=qs[cr];if(!q)return null;const im=q.section==="Math",qt=q.qtype,co=sc||SC[q.section];
+// Init order items when question changes
+E(()=>{if(qt==="order"&&q.options){sOrd(q.options.map((_,i)=>i));}sFI("");sSA([]);sS(null);sSW(false);},[cr]);
+// MC answer
 const amc=i=>{if(sl!==null)return;sS(i);sSW(true);sR(p=>[...p,{...q,ua:i,correct:i===q.correctIndex}]);};
+// SATA toggle
 const tsa=i=>{if(sw)return;sSA(p=>p.includes(i)?p.filter(x=>x!==i):[...p,i]);};
-const ssa=()=>{const ok=Array.isArray(q.correctIndex)&&sa.length===q.correctIndex.length&&sa.every(i=>q.correctIndex.includes(i));sSW(true);sR(p=>[...p,{...q,ua:sa,correct:ok}]);};
-const nx=()=>{if(cr+1>=qs.length){od(rs);return;}sC(c=>c+1);sS(null);sSA([]);sSW(false);};
+// SATA submit
+const ssa=()=>{const ok=Array.isArray(q.correctIndex)&&sa.length===q.correctIndex.length&&sa.every(i=>q.correctIndex.includes(i));sSW(true);sR(p=>[...p,{...q,ua:[...sa],correct:ok}]);};
+// Fill submit
+const fsu=()=>{const ans=fi.trim().toLowerCase();const cor=Array.isArray(q.correctIndex)?q.correctIndex.map(x=>x.toLowerCase()):[(q.correctIndex+"").toLowerCase()];const ok=cor.includes(ans);sSW(true);sR(p=>[...p,{...q,ua:fi.trim(),correct:ok}]);};
+// Order move
+const omv=(from,dir)=>{const to=from+dir;if(to<0||to>=ord.length)return;const n=[...ord];[n[from],n[to]]=[n[to],n[from]];sOrd(n);};
+// Order submit
+const osu=()=>{const ok=JSON.stringify(ord)===JSON.stringify(q.correctIndex);sSW(true);sR(p=>[...p,{...q,ua:[...ord],correct:ok}]);};
+// Next
+const nx=()=>{if(cr+1>=qs.length){od(rs);return;}sC(c=>c+1);};
+// Type labels
+const tlab=qt==="sata"?"SELECT ALL THAT APPLY — No partial credit":qt==="fill"?"FILL IN THE BLANK — Type your answer":qt==="order"?"ORDERED RESPONSE — Arrange in correct sequence":null;
+const tcol=qt==="sata"?"#F7A94F":qt==="fill"?"#A94FF7":qt==="order"?"#4FCF7F":"#888";
 return h("div",{id:"root"},h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:4}},h("button",{className:"back",onClick:()=>od(rs,true)},"\u2715"),h("span",{style:{color:"#888",fontSize:12,fontWeight:600}},(cr+1)+"/"+qs.length),h("div",{style:{display:"flex",gap:5,alignItems:"center"}},im&&h("button",{onClick:()=>sCl(!cl),style:{background:"none",border:"1px solid #444",borderRadius:5,padding:"2px 6px",fontSize:10,color:"#F7A94F"}},"\uD83D\uDD22"),h("span",{style:{fontSize:10,fontWeight:600,padding:"2px 7px",borderRadius:12,backgroundColor:SC[q.section]+"22",color:SC[q.section]}},SI[q.section]))),
 h("div",{className:"prog"},h("div",{className:"prog-in",style:{width:((cr+1)/qs.length*100)+"%",backgroundColor:co}})),
-h("div",{className:"card"},h("div",{style:{fontSize:10,color:"#888",textTransform:"uppercase",letterSpacing:".5px",marginBottom:3}},q.topic),is&&h("div",{className:"sata"},"SELECT ALL THAT APPLY \u2014 No partial credit"),h("p",{style:{fontSize:14,lineHeight:1.7,color:"#e0e0e0",margin:"0 0 14px",fontWeight:500}},q.question),
-h("div",{style:{display:"flex",flexDirection:"column",gap:6}},q.options.map((o,i)=>{
-if(is){const ck=sa.includes(i);let bg="transparent",bd="#333",c2="#e0e0e0",cb="transparent",cd="#555";
+h("div",{className:"card"},h("div",{style:{fontSize:10,color:"#888",textTransform:"uppercase",letterSpacing:".5px",marginBottom:3}},q.topic),
+tlab&&h("div",{style:{display:"inline-block",fontSize:9,fontWeight:700,padding:"2px 6px",borderRadius:4,backgroundColor:tcol+"22",color:tcol,border:"1px solid "+tcol+"44",marginBottom:6}},tlab),
+h("p",{style:{fontSize:14,lineHeight:1.7,color:"#e0e0e0",margin:"0 0 14px",fontWeight:500}},q.question),
+// === MC RENDERING ===
+qt==="mc"&&h("div",{style:{display:"flex",flexDirection:"column",gap:6}},q.options.map((o,i)=>{
+let bg="transparent",bd="#333",c2="#e0e0e0";if(sl!==null){if(i===q.correctIndex){bg="#4FCF7F15";bd="#4FCF7F";c2="#4FCF7F";}else if(i===sl){bg="#F76F6F15";bd="#F76F6F";c2="#F76F6F";}}
+return h("button",{key:i,className:"opt",onClick:()=>amc(i),disabled:sl!==null,style:{backgroundColor:bg,borderColor:bd,color:c2}},h("span",{style:{width:22,height:22,borderRadius:6,border:"1.5px solid "+bd,display:"flex",alignItems:"center",justifyContent:"center",fontSize:10,fontWeight:700,flexShrink:0,color:bd}},String.fromCharCode(65+i)),o);})),
+// === SATA RENDERING ===
+qt==="sata"&&h("div",{style:{display:"flex",flexDirection:"column",gap:6}},q.options.map((o,i)=>{
+const ck=sa.includes(i);let bg="transparent",bd="#333",c2="#e0e0e0",cb="transparent",cd="#555";
 if(sw){const ic=Array.isArray(q.correctIndex)&&q.correctIndex.includes(i);if(ic){bg="#4FCF7F15";bd="#4FCF7F";c2="#4FCF7F";cb="#4FCF7F";cd="#4FCF7F";}else if(ck){bg="#F76F6F15";bd="#F76F6F";c2="#F76F6F";cb="#F76F6F";cd="#F76F6F";}}else if(ck){bd="#4F9CF7";cb="#4F9CF7";cd="#4F9CF7";}
-return h("button",{key:i,className:"opt",onClick:()=>tsa(i),style:{backgroundColor:bg,borderColor:bd,color:c2}},h("div",{style:{width:20,height:20,borderRadius:4,border:"1.5px solid "+cd,backgroundColor:cb,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,color:"#fff",flexShrink:0}},ck||(sw&&Array.isArray(q.correctIndex)&&q.correctIndex.includes(i))?"\u2713":""),o);}
-else{let bg="transparent",bd="#333",c2="#e0e0e0";if(sl!==null){if(i===q.correctIndex){bg="#4FCF7F15";bd="#4FCF7F";c2="#4FCF7F";}else if(i===sl){bg="#F76F6F15";bd="#F76F6F";c2="#F76F6F";}}
-return h("button",{key:i,className:"opt",onClick:()=>amc(i),disabled:sl!==null,style:{backgroundColor:bg,borderColor:bd,color:c2}},h("span",{style:{width:22,height:22,borderRadius:6,border:"1.5px solid "+bd,display:"flex",alignItems:"center",justifyContent:"center",fontSize:10,fontWeight:700,flexShrink:0,color:bd}},String.fromCharCode(65+i)),o);}})),
-is&&!sw&&sa.length>0&&h("button",{className:"btn",onClick:ssa,style:{width:"100%",marginTop:9}},"Submit Answer"),
+return h("button",{key:i,className:"opt",onClick:()=>tsa(i),style:{backgroundColor:bg,borderColor:bd,color:c2}},h("div",{style:{width:20,height:20,borderRadius:4,border:"1.5px solid "+cd,backgroundColor:cb,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,color:"#fff",flexShrink:0}},ck||(sw&&Array.isArray(q.correctIndex)&&q.correctIndex.includes(i))?"\u2713":""),o);})),
+qt==="sata"&&!sw&&sa.length>0&&h("button",{className:"btn",onClick:ssa,style:{width:"100%",marginTop:9,backgroundColor:"#F7A94F"}},"Lock In Answer"),
+// === FILL IN BLANK RENDERING ===
+qt==="fill"&&h("div",{style:{marginBottom:10}},
+!sw&&h("div",{style:{display:"flex",gap:8}},h("input",{type:"text",value:fi,onChange:ev=>sFI(ev.target.value),onKeyDown:ev=>{if(ev.key==="Enter"&&fi.trim())fsu();},placeholder:"Type your answer...",style:{flex:1,padding:"10px 12px",borderRadius:8,border:"1px solid #444",backgroundColor:"#1a1a1e",color:"#e0e0e0",fontSize:14,outline:"none"}}),h("button",{className:"btn",onClick:fsu,disabled:!fi.trim(),style:{backgroundColor:"#A94FF7"}},"Submit")),
+sw&&h("div",{style:{padding:10,borderRadius:8,border:"1px solid "+(rs[rs.length-1]?.correct?"#4FCF7F":"#F76F6F")+"44",backgroundColor:(rs[rs.length-1]?.correct?"#4FCF7F":"#F76F6F")+"15",marginTop:6}},
+h("div",{style:{fontSize:13,fontWeight:600,color:rs[rs.length-1]?.correct?"#4FCF7F":"#F76F6F"}},rs[rs.length-1]?.correct?"✓ Correct!":"✗ Incorrect"),
+h("div",{style:{fontSize:12,color:"#ccc",marginTop:4}},"Your answer: ",fi),
+!rs[rs.length-1]?.correct&&h("div",{style:{fontSize:12,color:"#4FCF7F",marginTop:2}},"Correct answer: ",Array.isArray(q.correctIndex)?q.correctIndex[0]:q.correctIndex))),
+// === ORDERED RESPONSE RENDERING ===
+qt==="order"&&h("div",{style:{marginBottom:10}},
+h("div",{style:{display:"flex",flexDirection:"column",gap:4}},ord.map((idx,pos)=>{
+let bg="#1a1a1e",bd="#333",tc="#e0e0e0";
+if(sw){const cpos=q.correctIndex.indexOf(idx);const isRight=cpos===pos;bg=isRight?"#4FCF7F15":"#F76F6F15";bd=isRight?"#4FCF7F":"#F76F6F";tc=isRight?"#4FCF7F":"#F76F6F";}
+return h("div",{key:idx,style:{display:"flex",alignItems:"center",gap:6,padding:"8px 10px",borderRadius:8,border:"1px solid "+bd,backgroundColor:bg}},
+!sw&&h("div",{style:{display:"flex",flexDirection:"column",gap:2}},
+h("button",{onClick:()=>omv(pos,-1),disabled:pos===0,style:{background:"none",border:"1px solid #444",borderRadius:4,padding:"1px 6px",fontSize:10,color:"#888",cursor:pos===0?"default":"pointer"}},"\u25B2"),
+h("button",{onClick:()=>omv(pos,1),disabled:pos===ord.length-1,style:{background:"none",border:"1px solid #444",borderRadius:4,padding:"1px 6px",fontSize:10,color:"#888",cursor:pos===ord.length-1?"default":"pointer"}},"\u25BC")),
+h("span",{style:{width:22,height:22,borderRadius:6,border:"1px solid "+bd,display:"flex",alignItems:"center",justifyContent:"center",fontSize:10,fontWeight:700,color:tc,flexShrink:0}},pos+1),
+h("span",{style:{fontSize:13,color:tc}},q.options[idx]));})),
+!sw&&h("button",{className:"btn",onClick:osu,style:{width:"100%",marginTop:9,backgroundColor:"#4FCF7F"}},"Lock In Order"),
+sw&&h("div",{style:{fontSize:11,color:"#888",marginTop:6}},"Correct order: ",q.correctIndex.map((idx,i)=>(i+1)+". "+q.options[idx]).join(" → "))),
+// === EXPLANATION + NEXT ===
 sw&&h("div",{style:{backgroundColor:"#1a2a1a",border:"1px solid #4FCF7F33",borderRadius:8,padding:"9px 11px",marginTop:9,fontSize:12,lineHeight:1.7,color:"#bbb"}},"\uD83D\uDCA1 "+q.explanation),
 (sl!==null||sw)&&h("button",{className:"btn",onClick:nx,style:{width:"100%",marginTop:9}},cr+1>=qs.length?"See Results":"Next \u2192")),
 cl&&h(Clc,{onClose:()=>sCl(false)}));}
@@ -313,13 +388,13 @@ const td=new Date().toDateString();if(st.ld!==td){const y=new Date();y.setDate(y
 const go=s=>sS(s),P={st,up,rc,go};
 return h("div",null,sc==="home"&&h(Hm,P),sc==="quiz"&&h(Qz,P),sc==="review"&&h(SR,P),sc==="test"&&h(TT,P),sc==="mastery"&&h(MM,P));}
 
-function Hm({st,go}){const tp=st.tq>0?Math.round(st.tc/st.tq*100):0,m=gm(st),wk=m.filter(x=>x.status==="weak"),sg=m.filter(x=>x.status==="strong"),sa=QS.filter(q=>q.sata).length;
-return h("div",{id:"root"},h("div",{style:{textAlign:"center",padding:"24px 0 12px"}},h("div",{style:{fontSize:44}},"\uD83E\uDE7A"),h("h1",{className:"hero"},"Corey's TEAS Prep"),h("p",{style:{color:"#666",fontSize:12,margin:"4px 0"}},QS.length+" exam-level Qs \u00B7 "+sa+" SATA \u00B7 2026 high-yield")),
+function Hm({st,go}){const tp=st.tq>0?Math.round(st.tc/st.tq*100):0,m=gm(st),wk=m.filter(x=>x.status==="weak"),sg=m.filter(x=>x.status==="strong"),sa=QS.filter(q=>q.qtype==="sata").length,fi=QS.filter(q=>q.qtype==="fill").length,od=QS.filter(q=>q.qtype==="order").length,alt=sa+fi+od;
+return h("div",{id:"root"},h("div",{style:{textAlign:"center",padding:"24px 0 12px"}},h("div",{style:{fontSize:44}},"\uD83E\uDE7A"),h("h1",{className:"hero"},"Corey's TEAS Prep"),h("p",{style:{color:"#666",fontSize:12,margin:"4px 0"}},QS.length+" exam-level Qs \u00B7 "+alt+" alternate-type \u00B7 2026 high-yield")),
 st.tq>0&&h("div",{style:{display:"flex",justifyContent:"space-around",alignItems:"center",padding:"10px",backgroundColor:"#141418",borderRadius:12,marginBottom:14,flexWrap:"wrap",gap:8}},h(Rg,{pct:tp,size:56,stroke:5,label:"Overall"}),h("div",{style:{textAlign:"center"}},h("div",{style:{fontSize:18,fontWeight:800}},st.tq),h("div",{style:{fontSize:8,color:"#666"}},"DONE")),h("div",{style:{textAlign:"center"}},h("div",{style:{fontSize:18,fontWeight:800}},st.sk),h("div",{style:{fontSize:8,color:"#666"}},"STREAK")),wk.length>0&&h("div",{style:{textAlign:"center"}},h("div",{style:{fontSize:18,fontWeight:800,color:"#F76F6F"}},wk.length),h("div",{style:{fontSize:8,color:"#666"}},"WEAK")),h("div",{style:{textAlign:"center"}},h("div",{style:{fontSize:18,fontWeight:800,color:"#4FCF7F"}},sg.length),h("div",{style:{fontSize:8,color:"#666"}},"MASTERED"))),
 h("div",{className:"grid"},[{k:"quiz",i:"\u26A1",t:"Practice",d:"By section",c:"#4F9CF7"},{k:"review",i:"\uD83E\uDDE0",t:"Smart Review",d:"Crushes weak spots",c:"#F76F6F"},{k:"test",i:"\u23F1\uFE0F",t:"Exam Sim",d:"Real TEAS timing",c:"#F7A94F"},{k:"mastery",i:"\uD83D\uDCCA",t:"Mastery Map",d:"Visual progress",c:"#4FCF7F"}].map(m=>h("button",{key:m.k,className:"mcard",onClick:()=>go(m.k),style:{borderColor:m.c+"33"}},h("span",{style:{fontSize:26}},m.i),h("h3",{style:{margin:0,fontSize:13,fontWeight:700,color:m.c}},m.t),h("p",{style:{margin:0,fontSize:10,color:"#666"}},m.d)))),
 h("div",{className:"card"},h("div",{style:{display:"flex",justifyContent:"space-around",flexWrap:"wrap",gap:8}},SN.map(s=>{const x=st.sec[s];return h(Rg,{key:s,pct:x.a>0?Math.round(x.c/x.a*100):-1,size:52,stroke:5,color:SC[s],label:s.split(" ")[0],sub:EX[s].q+"Q"});}))),
 wk.length>0&&h("div",{className:"card",style:{marginTop:10,borderColor:"#F76F6F22"}},h("div",{style:{fontSize:12,fontWeight:700,color:"#F76F6F",marginBottom:6}},"\uD83D\uDD34 "+wk.length+" weak topics"),h("div",{style:{display:"flex",flexWrap:"wrap",gap:3}},wk.slice(0,8).map((w,i)=>h("span",{key:i,style:{fontSize:10,padding:"2px 6px",borderRadius:4,backgroundColor:"#F76F6F22",color:"#F76F6F"}},w.topic+" "+w.pct+"%"))),h("button",{className:"btn",onClick:()=>go("review"),style:{width:"100%",marginTop:8,backgroundColor:"#F76F6F",fontSize:12}},"Smart Review \u2192")),
-h("div",{style:{marginTop:12,padding:"10px",backgroundColor:"#141418",borderRadius:10,border:"1px solid #1e1e22",fontSize:11,color:"#888",lineHeight:1.6}},"\uD83D\uDCCC ",h("strong",null,"2026:")," Balancing equations, latent heat, macromolecule monomers, endocrine hormones, semicolons vs colons, table-based ratios. Watch Nurse Cheung on YouTube."),h("div",{style:{textAlign:"center",marginTop:16,fontSize:10,color:"#444"}},"v4.0 \u00B7 2026 High-Yield Edition"));}
+h("div",{style:{marginTop:12,padding:"10px",backgroundColor:"#141418",borderRadius:10,border:"1px solid #1e1e22",fontSize:11,color:"#888",lineHeight:1.6}},"\uD83D\uDCCC ",h("strong",null,"2026:")," Balancing equations, latent heat, macromolecule monomers, endocrine hormones, semicolons vs colons, table-based ratios. Watch Nurse Cheung on YouTube."),h("div",{style:{textAlign:"center",marginTop:16,fontSize:10,color:"#444"}},"v5.0 \u00B7 2026 High-Yield Edition"));}
 
 function Qz({st,rc,go}){const[ph,sP]=S("pick"),[qs,sQ]=S([]),[rs,sR]=S([]),[cn,sN]=S(10),[se,sE]=S("All");
 const run=s=>{const p=s==="All"?QS:QS.filter(q=>q.section===s);sQ(sh(p).slice(0,Math.min(cn,p.length)));sE(s);sP("active");};
@@ -345,7 +420,7 @@ h("div",{className:"card",style:{textAlign:"center",marginBottom:12}},(wk.length
 function TT({st,rc,go}){const[ph,sP]=S("setup"),[tt,sT]=S("full"),[qs,sQ]=S([]),[an,sA]=S({}),[cr,sC]=S(0),[tl,sTL]=S(0),[rs,sR]=S([]),[cl,sCl]=S(false);
 const tr=R(null),qr=R([]),ar=R({});
 const run=()=>{let q=[];if(tt==="full"){SN.forEach(s=>{q=q.concat(sh(QS.filter(x=>x.section===s)).slice(0,Math.min(EX[s].q,QS.filter(x=>x.section===s).length)));});q=sh(q);sTL(209*60);}else{q=sh(QS.filter(x=>x.section===tt)).slice(0,Math.min(EX[tt].q,QS.filter(x=>x.section===tt).length));sTL(EX[tt].m*60);}sQ(q);qr.current=q;sA({});ar.current={};sC(0);sP("active");};
-const sub=C(()=>{clearInterval(tr.current);const r=qr.current.map((q,i)=>({...q,ua:ar.current[i]??null,correct:q.sata?false:ar.current[i]===q.correctIndex}));rc(r);sR(r);sP("review");},[rc]);
+const sub=C(()=>{clearInterval(tr.current);const r=qr.current.map((q,i)=>({...q,ua:ar.current[i]??null,correct:q.qtype==="mc"?ar.current[i]===q.correctIndex:false}));rc(r);sR(r);sP("review");},[rc]);
 E(()=>{if(ph!=="active")return;tr.current=setInterval(()=>{sTL(t=>{if(t<=1){clearInterval(tr.current);sub();return 0;}return t-1;});},1000);return()=>clearInterval(tr.current);},[ph,sub]);
 const ha=i=>{const na={...an,[cr]:i};sA(na);ar.current=na;};
 const fm=s=>Math.floor(s/60)+":"+(s%60).toString().padStart(2,"0");
