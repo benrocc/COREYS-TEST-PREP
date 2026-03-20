@@ -1,42 +1,35 @@
+[README.md](https://github.com/user-attachments/files/26132050/README.md)
 # 🩺 Corey's TEAS Prep
 
-A self-contained TEAS 7 exam study app with 237 practice questions, smart review targeting, and visual mastery tracking.
+Exam-level TEAS 7 study app built for the 2026 test. Application-based questions, SATA support, smart weakness tracking.
 
-**Live at:** [benrocc.github.io/COREYS-TEST-PREP](https://benrocc.github.io/COREYS-TEST-PREP)
+**Live:** [benrocc.github.io/COREYS-TEST-PREP](https://benrocc.github.io/COREYS-TEST-PREP)
 
-## Features
+## What Makes This Different
 
-- **⚡ Practice Quiz** — Choose any section or all, pick question count (5-30), instant feedback with explanations
-- **🧠 Smart Review** — AI-powered weakness crusher: targets topics below 70% with 4 questions each, new topics with 3, repeats until 85%+ mastery
-- **⏱️ Exam Simulation** — Full 170Q/209min test or individual sections with real TEAS timing. Built-in 4-function calculator for Math
-- **📊 Mastery Map** — Visual ring gauges and progress bars for every topic across all sections
+These aren't flashcard-level recall questions. Every question is written at real TEAS 7 difficulty:
+- Multi-step math word problems (IV drip rates, dosage calculations, dilutions)
+- Science questions requiring application, not just definitions
+- Reading passages with tricky distractors
+- **SATA (Select All That Apply)** questions with no partial credit — the #1 score killer
 
-## Question Coverage (237 Questions)
+## 2026 High-Yield Topics
 
-| Section | Questions | Topics |
-|---------|-----------|--------|
-| Reading | 57 | Main Idea, Supporting Details, Following Directions, Data Interpretation, Evaluating Arguments, Comparing Themes, Author's Purpose, Inference, Context Clues, Fact vs Opinion, Text Structure, Logical Conclusion, Tone, Primary Source |
-| Math | 56 | Fractions, Decimals, Percentages, Ratios & Proportions, Algebra, Order of Operations, Metric Conversions, Measurement, Statistics, Geometry, Data Interpretation, Estimation, Inequalities, Comparing Numbers |
-| Science | 73 | Anatomy, Cardiovascular, Respiratory, Nervous System, Endocrine, Musculoskeletal, Blood, Digestive System, Reproductive System, Integumentary System, Immune System, Urinary System, Skeletal System, Cell Biology, Genetics, Microorganisms, Biology, Chemistry, Acids & Bases, States of Matter, Scientific Reasoning |
-| English | 51 | Grammar, Sentence Structure, Punctuation, Spelling, Vocabulary, Word Parts, Audience Awareness, Paragraph Organization, Writing Process, Active & Passive Voice |
+**Science** — Balancing equations, acids/bases, latent heat, phase-specific mitosis/meiosis, macromolecule monomers, endocrine (pituitary + pancreas), infectious vs non-infectious disease
 
-## Real TEAS 7 Exam Structure
+**Math** — Table-based ratios, multi-step healthcare problems, median/range, geometry (πr², lwh), dosage calcs
 
-| Section | Questions | Time |
-|---------|-----------|------|
-| Reading | 45 | 55 min |
-| Math | 38 | 57 min |
-| Science | 50 | 60 min |
-| English & Language Usage | 37 | 37 min |
-| **Total** | **170** | **209 min** |
+**Reading** — Schedules/maps/directories, passage analysis, argument evaluation
 
-## Tech
+**English** — Semicolon vs colon, SVA in complex sentences, medical word parts, audience awareness
 
-- Single `index.html` — zero dependencies, zero build step
-- React 18 via CDN
-- localStorage for progress persistence
-- Works on desktop and mobile
+## Study Strategy
+
+1. Smart Review first to find weak spots
+2. Watch **Nurse Cheung** on YouTube for Science
+3. Practice SATA — no partial credit
+4. Use **Mometrix** for extra SATA practice
+5. Hit 85%+ on every topic before test day
 
 ---
-
 Built with 💪 by Dad
