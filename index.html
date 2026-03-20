@@ -1,608 +1,240 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>Corey's TEAS Prep</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0d0d0f;color:#e0e0e0;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;min-height:100vh;-webkit-tap-highlight-color:transparent}
-#root{max-width:620px;margin:0 auto;padding:12px 12px 32px}
-button{font-family:inherit;cursor:pointer}
-button:disabled{opacity:.5;cursor:default}
-.card{background:#141418;border-radius:12px;padding:14px 12px;border:1px solid #1e1e22}
-.btn{background:#4F9CF7;color:#fff;border:none;border-radius:8px;padding:9px 16px;font-size:12px;font-weight:600}
-.btn2{background:transparent;color:#888;border:1px solid #333;border-radius:8px;padding:9px 16px;font-size:12px;font-weight:600}
-.back{background:none;border:none;color:#888;font-size:12px;padding:4px 0;margin-bottom:3px}
-.title{text-align:center;font-size:22px;font-weight:800;margin:0 0 3px;color:#e0e0e0}
-.hero{font-size:32px;font-weight:800;background:linear-gradient(135deg,#4F9CF7,#A94FF7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0;letter-spacing:-1px}
-.pick{display:flex;align-items:center;gap:9px;padding:11px;background:#141418;border:1px solid #333;border-radius:10px;width:100%;transition:all .2s}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-bottom:14px}
-.mcard{display:flex;flex-direction:column;align-items:center;gap:4px;padding:18px 10px;background:#141418;border:1px solid;border-radius:12px;transition:all .2s;text-align:center}
-.bar-out{height:6px;background:#222;border-radius:3px;overflow:hidden;width:100%}
-.bar-in{height:100%;border-radius:3px;transition:width .6s ease}
-.opt{display:flex;align-items:center;gap:9px;padding:10px 11px;border:1px solid #333;border-radius:8px;width:100%;font-size:13px;text-align:left;transition:all .15s;line-height:1.4;background:transparent;color:#e0e0e0}
-.opt-let{width:22px;height:22px;border-radius:6px;border:1.5px solid #555;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0}
-.prog{height:3px;background:#222;border-radius:2px;margin-bottom:12px;overflow:hidden}
-.prog-in{height:100%;border-radius:2px;transition:width .3s}
-.calc{position:fixed;bottom:12px;right:12px;width:220px;background:#1a1a1e;border-radius:14px;padding:10px;box-shadow:0 8px 32px rgba(0,0,0,.6);z-index:1000;border:1px solid #333}
-.calc-btn{border-radius:8px;border:none;padding:12px 0;font-size:16px;font-weight:600;color:#fff}
-.mbar{padding:8px 10px;border-radius:8px;margin-bottom:5px}
-.qnav{width:22px;height:22px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;border:1px solid #333}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
-</style>
-</head>
-<body>
-<div id="root"></div>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"><title>Corey's TEAS Prep</title>
+<style>*{margin:0;padding:0;box-sizing:border-box}body{background:#0d0d0f;color:#e0e0e0;font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}#root{max-width:620px;margin:0 auto;padding:12px 12px 32px}button{font-family:inherit;cursor:pointer}button:disabled{opacity:.5}.card{background:#141418;border-radius:12px;padding:14px 12px;border:1px solid #1e1e22}.btn{background:#4F9CF7;color:#fff;border:none;border-radius:8px;padding:9px 16px;font-size:12px;font-weight:600}.btn2{background:0 0;color:#888;border:1px solid #333;border-radius:8px;padding:9px 16px;font-size:12px;font-weight:600}.back{background:0 0;border:none;color:#888;font-size:12px;padding:4px 0;margin-bottom:3px}.title{text-align:center;font-size:22px;font-weight:800;margin:0 0 3px}.hero{font-size:30px;font-weight:800;background:linear-gradient(135deg,#4F9CF7,#A94FF7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0}.pick{display:flex;align-items:center;gap:9px;padding:11px;background:#141418;border:1px solid #333;border-radius:10px;width:100%}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-bottom:14px}.mcard{display:flex;flex-direction:column;align-items:center;gap:4px;padding:18px 10px;background:#141418;border:1px solid;border-radius:12px;text-align:center}.bar-out{height:6px;background:#222;border-radius:3px;overflow:hidden;width:100%}.bar-in{height:100%;border-radius:3px;transition:width .6s}.opt{display:flex;align-items:center;gap:9px;padding:10px 11px;border:1px solid #333;border-radius:8px;width:100%;font-size:13px;text-align:left;line-height:1.4;background:0 0;color:#e0e0e0;transition:all .15s}.prog{height:3px;background:#222;border-radius:2px;margin-bottom:12px;overflow:hidden}.prog-in{height:100%;border-radius:2px;transition:width .3s}.calc{position:fixed;bottom:12px;right:12px;width:220px;background:#1a1a1e;border-radius:14px;padding:10px;box-shadow:0 8px 32px rgba(0,0,0,.6);z-index:1000;border:1px solid #333}.calc-btn{border-radius:8px;border:none;padding:12px 0;font-size:16px;font-weight:600;color:#fff}.mbar{padding:8px 10px;border-radius:8px;margin-bottom:5px}.sata{display:inline-block;font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;background:#F7A94F22;color:#F7A94F;border:1px solid #F7A94F44;margin-bottom:6px}</style></head>
+<body><div id="root"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
 <script>
-const e=React.createElement,{useState,useEffect,useCallback,useRef}=React;
-const SN=["Reading","Math","Science","English & Language Usage"];
-const SI={Reading:"📖",Math:"🔢",Science:"🧬","English & Language Usage":"✍️"};
-const SC={Reading:"#4F9CF7",Math:"#F7A94F",Science:"#4FCF7F","English & Language Usage":"#A94FF7"};
-const EX={Reading:{q:45,m:55},Math:{q:38,m:57},Science:{q:50,m:60},"English & Language Usage":{q:37,m:37}};
-
-// Compact Q: [secIdx,topic,question,[opts],correct,explanation]
+const h=React.createElement,{useState:S,useEffect:E,useCallback:C,useRef:R}=React;
+const SN=["Reading","Math","Science","English & Language Usage"],SI={Reading:"\u{1F4D6}",Math:"\u{1F522}",Science:"\u{1F9EC}","English & Language Usage":"\u{270D}\uFE0F"},SC={Reading:"#4F9CF7",Math:"#F7A94F",Science:"#4FCF7F","English & Language Usage":"#A94FF7"},EX={Reading:{q:45,m:55},Math:{q:38,m:57},Science:{q:50,m:60},"English & Language Usage":{q:37,m:37}};
+// [secIdx,topic,question,[opts],answer,explanation] or with ,1] for SATA where answer=[]
 const QD=[
-// READING (0)
-[0,"Main Idea","Honeybees communicate food locations through dances. Main idea?",["Bees are social","Bees use dance for food locations","Flowers attract pollinators","Colonies have hierarchies"],1,"The central point is bees use dance for food communication."],
-[0,"Supporting Details","'The heart pumps blood. It beats ~100,000 times per day.' Supporting detail?",["Heart pumps blood","It beats 100,000 times/day","Blood is red","Body needs a heart"],1,"The heartbeat count supports the pumping function."],
-[0,"Main Idea","Handwashing reduces hospital infections by 40%. Main idea?",["Hospitals are dirty","Hand hygiene reduces infections","Soap kills bacteria","Nurses wash often"],1,"Central claim: handwashing reduces infections."],
-[0,"Supporting Details","'Exercise reduces heart disease. Walking 30 min/day lowers BP.' Supporting detail?",["Exercise is good","Walking 30 min lowers BP","Hearts get sick","Everyone should exercise"],1,"Specific walking detail supports main claim."],
-[0,"Supporting Details","'Dehydration is dangerous. Symptoms: dark urine, dizziness, dry mouth.' Supporting details?",["Dehydration is dangerous","Water is important","Dark urine, dizziness, dry mouth","Drink more water"],2,"Specific symptoms support the danger claim."],
-[0,"Supporting Details","'Smoking damages organs: lung cancer, heart disease, stroke risk.' Details?",["Smoking is bad","Organs are damaged","Lung cancer, heart disease, stroke","Quit smoking"],2,"Specific diseases support organ damage claim."],
-[0,"Main Idea","Antibiotic resistance grows from overuse in humans and livestock. Main idea?",["Livestock carry diseases","Overuse drives resistance","Medicine advances","Doctors overprescribe"],1,"Links overuse to resistance."],
-[0,"Main Idea","EHRs reduce errors, improve coordination, save time. Main idea?",["Paper is outdated","EHRs have multiple benefits","Tech is expensive","Doctors resist change"],1,"Focuses on multiple EHR benefits."],
-[0,"Main Idea","Telemedicine lets rural patients consult specialists remotely. Main idea?",["Rural areas lack hospitals","Telemedicine improves rural access","Tech is expensive","Docs prefer in-person"],1,"Centers on telemedicine solving rural access."],
-[0,"Following Directions","'Take 2 tablets every 8 hrs with food. Max 6 in 24 hrs.' How many at 8am, 4pm, midnight?",["2 total","4 total","6 total","8 total"],2,"2 × 3 doses = 6, which equals the maximum."],
-[0,"Following Directions","'Preheat to 350°F. Mix dry first, then wet. Bake 25 min.' First step?",["Mix dry","Add wet","Preheat oven","Bake 25 min"],2,"Preheating must happen first."],
-[0,"Following Directions","'Wash hands, gloves, goggles. Record temp before adding reagent.' After goggles?",["Add reagent","Remove gloves","Record temperature","Wash hands again"],2,"Record temp before adding reagent."],
-[0,"Data Interpretation","Hospital A: 120→80 infections. Hospital B: 95→90. Greatest improvement?",["Hospital A","Hospital B","Equal","Neither"],0,"A dropped 40 (33%); B dropped only 5."],
-[0,"Data Interpretation","Pie chart: 45% carbs, 30% fat, 25% protein. 2,000 cal total. Fat calories?",["450","500","600","900"],2,"30% of 2,000 = 600."],
-[0,"Data Interpretation","Temps: Mon 99.1, Tue 100.4, Wed 101.2, Thu 99.8. Peak day?",["Monday","Tuesday","Wednesday","Thursday"],2,"101.2 on Wednesday is highest."],
-[0,"Data Interpretation","Flu vax rates: 18-30: 35%, 31-50: 52%, 51-65: 68%, 65+: 72%. Conclusion?",["Young have highest rates","Rates increase with age","Vaccines fail for seniors","All equal"],1,"Clear upward trend with age."],
-[0,"Evaluating Arguments","'Ban school sugary drinks: obesity tripled since 1970, drinks are top sugar source.' Supported by?",["Opinion only","Emotional appeal","Statistical evidence","Celebrity endorsement"],2,"Uses verifiable statistics and factual claims."],
-[0,"Evaluating Arguments","What weakens 'BSN nurses give better care than ADN'?",["BSN programs are longer","Studies show no outcome difference","BSN nurses earn more","Hospitals prefer BSN"],1,"No outcome difference undermines the core claim."],
-[0,"Evaluating Arguments","Best evidence for 'organic food is healthier'?",["It costs more","A friend feels better","Peer-reviewed studies show lower pesticides","Farms look nicer"],2,"Peer-reviewed research is strongest evidence."],
-[0,"Comparing Themes","Passage A: Nightingale improved sanitation. Passage B: modern infection control. Shared theme?",["War is devastating","Hygiene saves lives in healthcare","Women in nursing","Tech is superior"],1,"Both center on cleanliness preventing death."],
-[0,"Comparing Themes","Article 1: nurse burnout from long shifts. Article 2: errors rise after 12-hr shifts. Shared?",["Nurses underpaid","Extended hours hurt healthcare","Hospitals need renovation","Patients complain"],1,"Both connect long hours to negative outcomes."],
-[0,"Author's Purpose","'Vaccinations saved millions. Every parent should vaccinate on schedule.' Purpose?",["Entertain","Inform only","Persuade to vaccinate","Describe ingredients"],2,"'Should' signals persuasion."],
-[0,"Author's Purpose","Pamphlet lists diabetes symptoms, risk factors, when to see doctor. Purpose?",["Entertain","Inform","Persuade","Narrate"],1,"Factual info without urging action = informational."],
-[0,"Author's Purpose","Article compares calories, nutrients, costs of 5 diets. Purpose?",["Sell a diet","Inform about options","Criticize dieting","Entertain"],1,"Objective comparison = informational."],
-[0,"Author's Purpose","Blog shares nurse's burnout and recovery story. Purpose?",["Inform with data","Narrate personal experience","Persuade to quit","Compare careers"],1,"Personal story = narrative purpose."],
-[0,"Inference","'Maria grabbed umbrella, raincoat, galoshes.' Infer?",["Likes accessories","Raining or expected","Going to work","Lives near water"],1,"Rain gear implies rain."],
-[0,"Inference","Region A: 2 doctors/10K. Region B: 15. Infer?",["A has better care","B likely better access","Both equal","A is wealthier"],1,"More doctors = better access."],
-[0,"Inference","ER visits spike Friday/Saturday nights. Infer?",["ERs understaffed","Weekend activities cause more incidents","People sicker weekends","Docs prefer weekdays"],1,"Weekend nightlife explains spikes."],
-[0,"Inference","'Packed waiting room, frazzled receptionist answering 3 lines.' Infer?",["Office is new","Unusually busy or understaffed","Receptionist incompetent","Patients angry"],1,"Overwhelmed = high volume or low staffing."],
-[0,"Inference","Hospital cafeteria adds calorie counts, allergen warnings, heart-healthy options. Infer?",["Food expensive","Promoting healthier eating","Closing","Staff complained about taste"],1,"Nutritional transparency = healthier eating push."],
-[0,"Context Clues","'Prognosis was grim; she predicted no recovery.' Prognosis?",["Diagnosis","Treatment plan","Prediction about outcome","Medical history"],2,"'Predicted' defines prognosis."],
-[0,"Context Clues","'Patient was lethargic — barely keeping eyes open.' Lethargic?",["Energetic","Drowsy, lacking energy","Anxious","Hungry"],1,"'Barely keeping eyes open' = drowsy."],
-[0,"Context Clues","'Benign tumor was not cancerous, no treatment.' Benign?",["Dangerous","Harmless","Painful","Growing rapidly"],1,"'Not cancerous' = harmless."],
-[0,"Context Clues","'Condition deteriorated; vitals worsened.' Deteriorated?",["Improved","Stabilized","Got worse","Same"],2,"'Worsened' explains deteriorated."],
-[0,"Context Clues","'Acute distress, writhing in pain.' Acute?",["Mild","Chronic","Severe and intense","Dull"],2,"'Writhing' shows severe intensity."],
-[0,"Context Clues","'Prophylactic antibiotic to prevent infection.' Prophylactic?",["Curative","Preventive","Experimental","Dangerous"],1,"'To prevent' defines it."],
-[0,"Fact vs Opinion","Which is opinion?",["Water boils at 100°C","Body has 206 bones","Nursing is most rewarding","Penicillin discovered 1928"],2,"'Most rewarding' is subjective."],
-[0,"Fact vs Opinion","Which is fact?",["Organic tastes better","Everyone should eat veggies","Vitamin C in citrus","Salads are healthiest"],2,"Vitamin C in citrus is verifiable."],
-[0,"Fact vs Opinion","Which is opinion?",["Flu vaccine available annually","Sanitizer contains alcohol","PT more effective than surgery","Liver filters toxins"],2,"'More effective' is subjective."],
-[0,"Fact vs Opinion","Which is fact?",["Nurses deserve higher pay","Stethoscope invented 1816","Hospitals need more staff","Healthcare too expensive"],1,"Invention date is verifiable."],
-[0,"Text Structure","'First wash hands. Next gloves. Then prep site. Finally inject.' Structure?",["Cause/effect","Compare/contrast","Sequential","Problem/solution"],2,"First/next/then/finally = sequential."],
-[0,"Text Structure","'Unlike aerobic (uses O₂), anaerobic uses stored energy.' Structure?",["Sequence","Problem-solution","Compare/contrast","Description"],2,"'Unlike' = compare/contrast."],
-[0,"Text Structure","'Obesity rose because of fast food and sedentary lifestyles.' Structure?",["Sequence","Cause and effect","Compare/contrast","Description"],1,"'Because of' = cause/effect."],
-[0,"Text Structure","'Students struggle with math. School implemented tutoring.' Structure?",["Compare/contrast","Cause/effect","Problem and solution","Sequence"],2,"Problem → solution."],
-[0,"Text Structure","'Flu and cold share coughing, but flu causes higher fevers.' Structure?",["Cause/effect","Problem-solution","Compare/contrast","Chronological"],2,"Comparing shared/different = compare/contrast."],
-[0,"Logical Conclusion","'All mammals are warm-blooded. Dolphins are mammals.' Conclusion?",["Dolphins live in water","Dolphins are warm-blooded","Dolphins are fish","All warm-blooded are mammals"],1,"Syllogism: mammals warm-blooded + dolphins are mammals."],
-[0,"Logical Conclusion","Students with 8+ hrs sleep score higher. Jamie sleeps 5. Conclusion?",["Jamie will fail","Scores may be lower","Sleep doesn't matter","Jamie is lazy"],1,"Less sleep associated with lower scores."],
-[0,"Logical Conclusion","Label: 'Don't operate heavy machinery.' Patient takes it. Logical?",["Drive to work","Avoid driving","Medication ineffective","Warning optional"],1,"Warning means avoid driving."],
-[0,"Logical Conclusion","Following discharge instructions = 50% fewer readmissions. Patient X ignores them.",["Definitely readmitted","Higher readmission risk","Instructions don't matter","Patient X is healthy"],1,"Ignoring raises risk (not guaranteed)."],
-[0,"Logical Conclusion","Food: 50g sugar/serving. Daily limit 25g. One serving means?",["Double the daily recommendation","Food is healthy","Sugar isn't a concern","Need more sugar"],0,"50g is double the 25g limit."],
-[0,"Tone","'Reckless policy endangered lives, wasted money.' Tone?",["Neutral","Critical","Celebratory","Indifferent"],1,"'Reckless/endangered/wasted' = critical."],
-[0,"Tone","'Thrilled to announce cancer treatment breakthrough.' Tone?",["Pessimistic","Sarcastic","Optimistic/excited","Neutral"],2,"'Thrilled/breakthrough' = excited."],
-[0,"Tone","'Some progress made, but far from solving opioid crisis.' Tone?",["Hopeful","Cautiously concerned","Angry","Humorous"],1,"Progress acknowledged but distance noted."],
-[0,"Tone","'Despite challenges, team achieved remarkable results.' Tone?",["Pessimistic","Admiring","Sarcastic","Indifferent"],1,"'Remarkable' = admiration."],
-[0,"Primary Source","Which is primary?",["Civil War textbook","Rome documentary","Scientist's original paper","Wikipedia article"],2,"Original paper = firsthand evidence."],
-[0,"Primary Source","Which is secondary?",["Patient's chart","Nurse's account","Textbook summarizing theories","Researcher's lab report"],2,"Textbook summarizes others' work."],
-[0,"Primary Source","Researcher publishes their clinical trial findings. This is?",["Secondary","Tertiary","Primary","Editorial"],2,"Own findings = primary source."],
-// MATH (1)
-[1,"Fractions","3/4 + 2/3 = ?",["5/7","17/12","1/2","5/12"],1,"LCD 12: 9/12 + 8/12 = 17/12."],
-[1,"Fractions","Patient drinks 3/4 of 16 oz glass. How many oz?",["8","10","12","14"],2,"3/4 × 16 = 12."],
-[1,"Fractions","5/6 - 1/3 = ?",["4/3","1/2","2/3","1/6"],1,"5/6 - 2/6 = 3/6 = 1/2."],
-[1,"Fractions","2/5 × 3/7 = ?",["6/35","5/12","6/12","1/7"],0,"2×3=6, 5×7=35."],
-[1,"Fractions","3/4 ÷ 1/2 = ?",["3/8","3/2","1/2","6/4"],1,"Flip: 3/4 × 2/1 = 3/2."],
-[1,"Decimals","Convert 7/8 to decimal.",["0.75","0.875","0.78","0.87"],1,"7÷8=0.875."],
-[1,"Decimals","2.45 × 0.3 = ?",["7.35","0.735","73.5","0.0735"],1,"=0.735."],
-[1,"Decimals","Round 4.3561 to nearest hundredth.",["4.35","4.36","4.4","4.356"],1,"Thousandths 6≥5, round up."],
-[1,"Decimals","0.125 as fraction in lowest terms?",["1/4","1/8","1/6","1/10"],1,"125/1000=1/8."],
-[1,"Percentages","Weight 200→180 lbs. Percent decrease?",["20%","10%","15%","18%"],1,"20/200×100=10%."],
-[1,"Percentages","$32/hr + 5% raise. New rate?",["$33.00","$33.60","$34.00","$37.00"],1,"$32+$1.60=$33.60."],
-[1,"Percentages","15% of 240?",["24","36","30","48"],1,"0.15×240=36."],
-[1,"Percentages","450 patients, 18% in ICU. How many?",["81","72","90","63"],0,"0.18×450=81."],
-[1,"Percentages","$85 after 15% off. Original?",["$97.75","$100","$102.50","$110"],1,"85/0.85=$100."],
-[1,"Percentages","42 out of 60. Percentage?",["60%","65%","70%","75%"],2,"42/60=70%."],
-[1,"Ratios & Proportions","1:4 med:saline. 10mL med = how much saline?",["14","40","20","4"],1,"10×4=40mL."],
-[1,"Ratios & Proportions","3 tablets=750mg. 5 tablets=?",["1,000","1,250","1,500","900"],1,"250×5=1,250mg."],
-[1,"Ratios & Proportions","Class 30, ratio M:F 2:3. How many females?",["12","15","18","20"],2,"5 parts, 6 each. F=18."],
-[1,"Ratios & Proportions","180mi in 3hrs. Distance in 5hrs?",["250","300","350","270"],1,"60mph×5=300."],
-[1,"Ratios & Proportions","Recipe 2:1 flour:sugar. 9 cups total = how much flour?",["3","4","6","5"],2,"3 parts, 3 each. Flour=6."],
-[1,"Ratios & Proportions","Map 1in=25mi. 3.5in apart. Distance?",["75","80","87.5","90"],2,"3.5×25=87.5mi."],
-[1,"Algebra","Solve: 3x+7=22",["x=5","x=7","x=3","x=15"],0,"3x=15,x=5."],
-[1,"Algebra","2(x-3)=14. x=?",["10","8.5","7","5"],0,"2x=20,x=10."],
-[1,"Algebra","x/4=12. x=?",["3","48","16","36"],1,"x=48."],
-[1,"Algebra","y=3x-2 when x=4. y=?",["10","14","12","8"],0,"12-2=10."],
-[1,"Algebra","5x-3=2x+9. x=?",["2","4","3","6"],1,"3x=12,x=4."],
-[1,"Algebra","Rectangle P=36cm, L=10cm. Width?",["6","8","13","16"],1,"2W=16,W=8."],
-[1,"Order of Operations","8+2×(6-3)²=?",["90","26","30","62"],1,"3²=9,2×9=18,8+18=26."],
-[1,"Order of Operations","48÷(4+4)×2=?",["12","6","24","16"],0,"48÷8=6,6×2=12."],
-[1,"Order of Operations","3²+4²=?",["14","25","49","7"],1,"9+16=25."],
-[1,"Metric Conversions","2.5 grams = how many mg?",["25","250","2,500","25,000"],2,"2.5×1000=2500."],
-[1,"Metric Conversions","98.6°F to °C. C=(F-32)×5/9",["37°C","36°C","38°C","35°C"],0,"66.6×5/9=37."],
-[1,"Metric Conversions","176 lbs to kg (1kg≈2.2lbs)",["80","70","88","75"],0,"176÷2.2=80."],
-[1,"Metric Conversions","4.5 feet = inches?",["45","48","54","56"],2,"4.5×12=54."],
-[1,"Metric Conversions","3 liters = mL?",["30","300","3,000","30,000"],2,"3×1000=3000."],
-[1,"Measurement","2 quarts = cups?",["4","6","8","16"],2,"4×2=8."],
-[1,"Measurement","5mL every 6hrs. Total in 24hrs?",["15","20","25","30"],1,"4×5=20mL."],
-[1,"Measurement","Tablespoons in 1/4 cup?",["2","3","4","6"],2,"16/4=4."],
-[1,"Statistics","Scores: 78,85,90,85,92. Mean?",["85","86","88","90"],1,"430÷5=86."],
-[1,"Statistics","Data: 3,7,7,9,12. Median?",["3","7","9","7.6"],1,"Middle value=7."],
-[1,"Statistics","Scores: 88,92,88,76,88,95. Mode?",["76","88","92","95"],1,"88 appears 3 times."],
-[1,"Statistics","Data: 14,22,8,35,11. Range?",["24","27","22","43"],1,"35-8=27."],
-[1,"Statistics","Weights: 150,160,155,170,165. Median?",["155","160","165","150"],1,"Ordered middle=160."],
-[1,"Geometry","Rectangle 12cm × 5cm. Area?",["17cm²","34cm²","60cm²","120cm²"],2,"12×5=60."],
-[1,"Geometry","Circle diameter 4cm. Area? (π≈3.14)",["6.28","12.56","25.12","50.24"],1,"r=2, π×4=12.56."],
-[1,"Geometry","Box 10×5×3 cm. Volume?",["18","50","150","300"],2,"10×5×3=150."],
-[1,"Geometry","Triangle base 8, height 6. Area?",["14","24","48","28"],1,"½×8×6=24."],
-[1,"Data Interpretation","Sales: Jan $4200, Feb $3800, Mar $5100, Apr $4600. Avg?",["$4,200","$4,425","$4,600","$5,100"],1,"17700÷4=4425."],
-[1,"Data Interpretation","BP over 5 visits: 140,135,130,128,125. Trend?",["Increasing","No change","Decreasing","Unstable"],2,"Consistently decreasing."],
-[1,"Estimation","Estimate 4.89 × 3.12",["About 8","About 12","About 15","About 20"],2,"≈5×3=15."],
-[1,"Estimation","1,950 cal/day ÷ 3 meals ≈?",["~500","~650","~750","~1,000"],1,"1950÷3≈650."],
-[1,"Inequalities","Solve: 2x+5>11",["x>3","x>8","x<3","x>6"],0,"2x>6,x>3."],
-[1,"Comparing Numbers","Least to greatest order?",["0.5,1/3,0.75,2/3","1/3,0.5,2/3,0.75","0.75,2/3,0.5,1/3","2/3,1/3,0.75,0.5"],1,"0.33,0.5,0.67,0.75."],
-// SCIENCE (2)
-[2,"Anatomy","Which organ filters blood, produces urine?",["Liver","Kidney","Spleen","Pancreas"],1,"Kidneys filter waste, produce urine."],
-[2,"Cardiovascular","Which chamber pumps oxygenated blood to body?",["Right atrium","Right ventricle","Left atrium","Left ventricle"],3,"Left ventricle pumps through aorta."],
-[2,"Cardiovascular","Vessel carrying deoxygenated blood to lungs?",["Aorta","Pulmonary vein","Pulmonary artery","Vena cava"],2,"Pulmonary artery → lungs."],
-[2,"Cardiovascular","The SA node is the heart's:",["Filter","Valve","Natural pacemaker","Pump"],2,"SA node sets heart rhythm."],
-[2,"Cardiovascular","Valve between left atrium and ventricle?",["Tricuspid","Mitral/bicuspid","Aortic","Pulmonary"],1,"Mitral valve."],
-[2,"Respiratory","Trachea branches into two:",["Alveoli","Bronchioles","Bronchi","Pharynx"],2,"Left and right bronchi."],
-[2,"Respiratory","Gas exchange occurs in:",["Bronchi","Bronchioles","Alveoli","Trachea"],2,"Alveoli exchange O₂/CO₂."],
-[2,"Respiratory","Diaphragm's primary role?",["Digestion","Breathing","Circulation","Excretion"],1,"Contracts to draw air in."],
-[2,"Nervous System","Brain part controlling balance?",["Cerebrum","Cerebellum","Medulla","Hypothalamus"],1,"Cerebellum coordinates movement."],
-[2,"Nervous System","Lobe processing vision?",["Frontal","Parietal","Temporal","Occipital"],3,"Occipital lobe."],
-[2,"Nervous System","PNS includes:",["Brain+spinal cord","Cranial+spinal nerves","Only sensory neurons","Only brain"],1,"Cranial and spinal nerves."],
-[2,"Endocrine","Insulin produced by:",["Thyroid","Adrenals","Pancreas","Pituitary"],2,"Pancreatic beta cells."],
-[2,"Endocrine","Adrenal glands sit on:",["Liver","Kidneys","Pancreas","Spleen"],1,"Atop each kidney."],
-[2,"Anatomy","Largest organ?",["Liver","Brain","Skin","Large intestine"],2,"Skin ~20 sq ft."],
-[2,"Musculoskeletal","Connects muscle to bone?",["Ligament","Tendon","Cartilage","Fascia"],1,"Tendons. Ligaments=bone to bone."],
-[2,"Musculoskeletal","Smallest bone?",["Femur","Stapes","Patella","Radius"],1,"Stapes in middle ear."],
-[2,"Blood","RBC function?",["Fight infection","Transport oxygen","Clot blood","Produce antibodies"],1,"Hemoglobin transports O₂."],
-[2,"Blood","Which cell fights infection?",["RBCs","Platelets","WBCs","Plasma"],2,"White blood cells defend."],
-[2,"Digestive System","Most nutrient absorption occurs in:",["Stomach","Small intestine","Large intestine","Esophagus"],1,"Small intestine (jejunum/ileum)."],
-[2,"Digestive System","Which organ produces bile?",["Gallbladder","Pancreas","Liver","Stomach"],2,"Liver produces; gallbladder stores."],
-[2,"Digestive System","Gallbladder stores:",["Insulin","Bile","Urine","Glycogen"],1,"Stores bile for fat digestion."],
-[2,"Digestive System","Correct digestive tract order:",["Mouth→stomach→esophagus→intestines","Mouth→esophagus→stomach→SI→LI","Mouth→esophagus→LI→SI","Stomach→mouth→esophagus→intestines"],1,"Mouth→esophagus→stomach→small→large."],
-[2,"Reproductive System","Fertilization typically occurs in:",["Uterus","Ovary","Fallopian tube","Cervix"],2,"Usually in fallopian tube."],
-[2,"Reproductive System","Testosterone primarily from:",["Prostate","Testes","Adrenals","Pituitary"],1,"Testes produce testosterone."],
-[2,"Reproductive System","Placenta's primary function?",["Produce milk","Exchange nutrients/waste","Store eggs","Produce sperm"],1,"Nutrient/oxygen exchange."],
-[2,"Integumentary System","Layer with blood vessels and nerves?",["Epidermis","Dermis","Hypodermis","Stratum corneum"],1,"Dermis has vessels, nerves, follicles."],
-[2,"Integumentary System","Pigment giving skin color?",["Hemoglobin","Keratin","Melanin","Collagen"],2,"Melanin from melanocytes."],
-[2,"Immune System","Antibodies produced by:",["RBCs","T cells","B cells/plasma cells","Platelets"],2,"B cells → plasma cells → antibodies."],
-[2,"Immune System","Vaccination provides which immunity?",["Natural passive","Artificial active","Natural active","Artificial passive"],1,"Vaccines stimulate immune response."],
-[2,"Immune System","Lymphatic system helps by:",["Producing RBCs","Filtering pathogens, returning fluid","Digesting food","Producing hormones"],1,"Filters via lymph nodes."],
-[2,"Urinary System","Functional unit of kidney?",["Alveolus","Neuron","Nephron","Villus"],2,"Nephrons filter blood."],
-[2,"Urinary System","Urine travels kidney→bladder via:",["Urethra","Ureter","Renal vein","Collecting duct"],1,"Ureters connect kidneys to bladder."],
-[2,"Skeletal System","RBCs produced in:",["Liver","Spleen","Red bone marrow","Lymph nodes"],2,"Red marrow in flat/long bones."],
-[2,"Skeletal System","Widest range of motion joint?",["Hinge","Pivot","Ball-and-socket","Fixed"],2,"Shoulder/hip allow all directions."],
-[2,"Cell Biology","Powerhouse of the cell?",["Nucleus","Ribosome","Mitochondria","Golgi"],2,"Mitochondria produce ATP."],
-[2,"Cell Biology","DNA replication phase?",["G1","S phase","G2","M phase"],1,"S = synthesis phase."],
-[2,"Cell Biology","Molecule carrying amino acids to ribosome?",["mRNA","rRNA","tRNA","DNA"],2,"tRNA matches codons."],
-[2,"Cell Biology","Macromolecule storing genetic info?",["Proteins","Lipids","Carbs","Nucleic acids"],3,"DNA/RNA."],
-[2,"Cell Biology","Protein synthesis organelle?",["Lysosome","Ribosome","Vacuole","Centriole"],1,"Ribosomes assemble proteins."],
-[2,"Cell Biology","Cell→?→organ→organ system",["Tissue","Molecule","Organelle","Organism"],0,"Cell→tissue→organ→system."],
-[2,"Cell Biology","Osmosis moves:",["Solute across membrane","Water across semipermeable membrane","Gases in lungs","Blood through vessels"],1,"Water across semipermeable membrane."],
-[2,"Cell Biology","Mitosis produces:",["4 haploid","2 identical diploid","2 haploid","4 diploid"],1,"2 identical diploid cells."],
-[2,"Cell Biology","Meiosis produces:",["2 diploid","4 haploid","2 haploid","4 diploid"],1,"4 unique haploid cells."],
-[2,"Cell Biology","ATP without oxygen?",["Aerobic respiration","Fermentation","Photosynthesis","Osmosis"],1,"Fermentation = anaerobic."],
-[2,"Cell Biology","Krebs cycle location?",["Cytoplasm","Nucleus","Mitochondrial matrix","Cell membrane"],2,"In mitochondrial matrix."],
-[2,"Genetics","Dominant/recessive first described by:",["Darwin","Watson & Crick","Mendel","Pasteur"],2,"Mendel's pea experiments."],
-[2,"Genetics","Aa × Aa cross: fraction with recessive phenotype?",["1/4","1/2","3/4","All"],0,"Punnett: AA,Aa,Aa,aa → 1/4 aa."],
-[2,"Genetics","Carrier of recessive trait genotype?",["AA","Aa","aa","Cannot determine"],1,"Heterozygous carries but doesn't show."],
-[2,"Genetics","Sex-linked trait example?",["Blood type","Eye color","Color blindness","Height"],2,"X-chromosome linked."],
-[2,"Microorganisms","Antibiotics treat which pathogen?",["Viruses","Bacteria","Fungi","Prions"],1,"Antibiotics target bacteria only."],
-[2,"Microorganisms","Which disease is viral?",["Strep throat","TB","Influenza","MRSA"],2,"Flu is viral; others bacterial."],
-[2,"Microorganisms","Bacteria needing oxygen are:",["Anaerobic","Aerobic","Facultative","Parasitic"],1,"Aerobic = require O₂."],
-[2,"Biology","Which is NOT a liver function?",["Detoxification","Bile production","Insulin production","Glycogen storage"],2,"Pancreas makes insulin."],
-[2,"Chemistry","pH of neutral solution?",["0","5","7","14"],2,"pH 7 = neutral."],
-[2,"Chemistry","Bond sharing electrons?",["Ionic","Covalent","Hydrogen","Metallic"],1,"Covalent = shared pairs."],
-[2,"Chemistry","First shell max electrons?",["2","4","6","8"],0,"n=1 holds 2."],
-[2,"Chemistry","Table salt formula?",["NaOH","NaCl","KCl","CaCO₃"],1,"Sodium chloride."],
-[2,"Chemistry","More electrons than protons =",["Positive","Negative","Neutral","No charge"],1,"Extra e⁻ = anion (negative)."],
-[2,"Chemistry","Most abundant element in body?",["Carbon","Hydrogen","Nitrogen","Oxygen"],3,"O₂ ~65% of mass."],
-[2,"Chemistry","Exothermic reaction: energy is",["Absorbed","Released","Destroyed","Created"],1,"Releases energy."],
-[2,"Chemistry","Decomposition breaks into:",["Larger molecules","Simpler substances","Polymers","Crystals"],1,"Compound → simpler."],
-[2,"Chemistry","Isotopes differ in:",["Protons","Electrons","Neutrons","Valence e⁻"],2,"Same protons, different neutrons."],
-[2,"Chemistry","Catalyst effect?",["Stops reaction","Speeds up, not consumed","Slows down","Changes products"],1,"Lowers activation energy."],
-[2,"Chemistry","Water is polar because:",["Contains hydrogen","O pulls electrons more","Has 2 H atoms","Dissolves things"],1,"O electronegativity creates charge."],
-[2,"Chemistry","Carbon's atomic number?",["4","6","8","12"],1,"6 protons."],
-[2,"Acids & Bases","pH 3 solution is:",["Neutral","Basic","Strongly acidic","Weakly basic"],2,"Below 7 = acidic. 3 = strong."],
-[2,"Acids & Bases","Property of bases?",["Taste sour","Turn litmus red","Feel slippery","pH below 7"],2,"Bases: slippery, bitter, blue litmus."],
-[2,"States of Matter","Solid directly to gas?",["Evaporation","Condensation","Sublimation","Deposition"],2,"Sublimation (e.g., dry ice)."],
-[2,"States of Matter","Chemical change example?",["Melting ice","Cutting paper","Rusting iron","Dissolving sugar"],2,"Rusting = new substance formed."],
-[2,"Scientific Reasoning","Measured variable?",["Independent","Dependent","Control","Confounding"],1,"Dependent = what you measure."],
-[2,"Scientific Reasoning","Hypothesis must be:",["Proven true","Testable and falsifiable","Based on opinion","Accepted by all"],1,"Must be testable."],
-[2,"Scientific Reasoning","Control group:",["Gets treatment","Exposed to IV","No treatment","Always larger"],2,"No treatment = baseline."],
-[2,"Scientific Reasoning","Best hypothesis format?",["Plants need sun","If more sun, then taller","Sun is good","Plants always grow"],1,"If/then = testable prediction."],
-[2,"Scientific Reasoning","Double-blind means:",["Only researcher knows","Neither knows assignments","Only participants know","Everyone knows"],1,"Neither side knows → less bias."],
-[2,"Scientific Reasoning","Best tool for liquid volume?",["Balance scale","Graduated cylinder","Thermometer","Ruler"],1,"Graduated cylinder measures liquid."],
-[2,"Scientific Reasoning","Repeated trials improve:",["Validity","Reliability","Independent variable","Hypothesis"],1,"Consistent repeats = reliability."],
-// ENGLISH (3)
-[3,"Grammar","Grammatically correct?",["Patient and me went","Me and patient went","Patient and I went","I and patient went"],2,"'Patient and I' = correct subject."],
-[3,"Grammar","'Neither doctor nor nurses ___ available.'",["is","was","were","has been"],2,"Nearer subject 'nurses' (plural) → were."],
-[3,"Grammar","'Each of students ___ required to pass.'",["are","were","is","have been"],2,"'Each' singular → is."],
-[3,"Grammar","'Data ___ inconclusive.' (formal)",["is","are","was","weren't"],1,"Formal: data plural → are."],
-[3,"Grammar","'Between you and ___'",["I","me","myself","we"],1,"Preposition → object 'me'."],
-[3,"Grammar","'Who/Whom should I contact?'",["Who","Whom","Whoever","Whomever"],1,"Object of contact → whom."],
-[3,"Grammar","'___ bags are in lobby.' (belonging to them)",["There","Their","They're","Theyre"],1,"Their = possessive."],
-[3,"Grammar","'Team of doctors ___ arriving.'",["are","is","were","have"],1,"Collective noun → is."],
-[3,"Grammar","'She is the nurse ___ helped me.'",["which","whom","who","whose"],2,"Subject of helped → who."],
-[3,"Sentence Structure","Which is complete?",["Running through hospital.","Nurse who was on duty.","After surgery was done.","Doctor prescribed antibiotics."],3,"Subject + predicate = complete."],
-[3,"Sentence Structure","'Patient recovered, she was discharged.' This is:",["Simple","Compound","Run-on","Complex"],2,"Comma splice = run-on."],
-[3,"Sentence Structure","Parallel structure?",["Running, to swim, biking","Running, swimming, biking","To run, swimming, to bike","Run, swim, bike"],1,"Consistent gerunds."],
-[3,"Sentence Structure","Complex sentence?",["Nurse checked vitals.","Nurse checked, doctor reviewed.","After nurse checked, doctor reviewed.","Check vitals."],2,"Independent + dependent clause."],
-[3,"Sentence Structure","'Running through the hall.' This is:",["Complete","Fragment","Run-on","Compound"],1,"No subject/verb = fragment."],
-[3,"Sentence Structure","Correctly combines two ideas?",["Patient arrived he was in pain.","Patient arrived, he was in pain.","Patient arrived, and he was in pain.","Patient arrived and, he was in pain."],2,"Comma + 'and' joins clauses."],
-[3,"Punctuation","Correct semicolon?",["Tired; and hungry.","Tired; she needed rest.","Patient; was tired.","The; patient was tired."],1,"Joins two independent clauses."],
-[3,"Punctuation","Possessive for one nurse?",["nurses station","nurse's station","nurses' station","nurses's station"],1,"Singular: nurse's."],
-[3,"Punctuation","Apostrophe for dog's collar?",["It's collar is red.","Its collar is red.","Its' collar.","Collar is it's."],1,"Its = possessive (no apostrophe)."],
-[3,"Punctuation","Correct colon?",["Patient needs: rest.","Patient needs the following: rest, fluids, medication.","The: patient needs rest.","Patient: needs rest."],1,"Colon after complete clause."],
-[3,"Punctuation","Correct quotation marks?",["Said, \"Take meds\".","Said, \"Take meds.\"","Said \"Take meds.\"","\"Said, Take meds.\""],1,"Period inside quotes."],
-[3,"Punctuation","Correctly punctuated?",["Asked \"feeling better?\"","Asked, \"Feeling better?\"","Asked \"Feeling better\"?","Asked, \"feeling better?\""],1,"Comma, capitalize, ? inside."],
-[3,"Spelling","Correct spelling?",["Occurance","Occurence","Occurrence","Occurrrence"],2,"Two c's, two r's."],
-[3,"Spelling","Correct?",["Accomodate","Accommodate","Acommodate","Acomodate"],1,"Two c's, two m's."],
-[3,"Spelling","Correct?",["Conscientous","Conscientious","Concsientious","Consciencious"],1,"Conscientious."],
-[3,"Spelling","Correct?",["Hemorrhage","Hemorhage","Hemmorhage","Hemorrage"],0,"Hemorrhage."],
-[3,"Spelling","Correct?",["Recieve","Receive","Receve","Receeve"],1,"i before e after c."],
-[3,"Vocabulary","'Adverse ___ on patient.'",["affect","effect","affect/effect","infect"],1,"Effect = noun (result)."],
-[3,"Vocabulary","'Benevolent' means?",["Harmful","Kind/generous","Strict","Indifferent"],1,"Kind and generous."],
-[3,"Vocabulary","'Favorable' means?",["Unlikely","Promising/positive","Uncertain","Dangerous"],1,"Good outcome expected."],
-[3,"Vocabulary","'Intravenously' means?",["By mouth","Through skin","Into a vein","Into muscle"],2,"Intra=within, venous=veins."],
-[3,"Vocabulary","'Contraindicated' means?",["Recommended","Not advisable, may harm","Required","Optional"],1,"Should NOT be used."],
-[3,"Vocabulary","'Chronic' means?",["Short-term","Long-lasting/recurring","Life-threatening","Elderly only"],1,"Persists long time."],
-[3,"Vocabulary","'Acute inflammation' — acute?",["Mild","Severe/sudden onset","Chronic","Minor"],1,"Sharp, severe, sudden."],
-[3,"Vocabulary","'Asymptomatic' means?",["Severe symptoms","Without symptoms","Mild symptoms","Developing symptoms"],1,"a- = without."],
-[3,"Vocabulary","'Noncompliant' means?",["Following instructions","Not following plan","Allergic","Second opinion"],1,"Not adhering to treatment."],
-[3,"Vocabulary","'Bilateral' means?",["One side","Both sides","The back","The front"],1,"Bi=two, lateral=side."],
-[3,"Vocabulary","'Sublingual' administered?",["Into vein","Under tongue","On skin","Into muscle"],1,"Sub=under, lingual=tongue."],
-[3,"Word Parts","Prefix 'hyper-' means?",["Below","Above/excessive","Around","Against"],1,"Hyper=excessive."],
-[3,"Word Parts","Suffix '-itis' indicates?",["Condition","Inflammation","Removal","Study of"],1,"-itis=inflammation."],
-[3,"Word Parts","'Bradycardia' — 'brady-' means?",["Fast","Slow","Large","Small"],1,"Brady=slow."],
-[3,"Word Parts","Root 'cardi' refers to?",["Brain","Lung","Heart","Stomach"],2,"Cardi/cardio=heart."],
-[3,"Audience Awareness","Most appropriate for research paper?",["Results were pretty cool","Findings demonstrated significant improvement","We totally proved our point","Data was awesome"],1,"Formal, precise language."],
-[3,"Audience Awareness","Nurse charting should use which tone?",["Casual","Objective/clinical","Persuasive","Humorous"],1,"Clinical documentation."],
-[3,"Audience Awareness","Most concise version of 'Due to the fact that patient felt unwell, she decided to stay home'?",["Because patient felt unwell, she stayed home.","On account of being sick, she decided to stay.","Patient, who was not well, decided to stay home.","Seeing as how she felt bad, she chose to stay."],0,"'Because' is most concise."],
-[3,"Paragraph Organization","Best topic sentence for handwashing paragraph?",["Soap comes in many forms.","Proper handwashing prevents infection.","Many forget to wash hands.","Water temperature matters."],1,"States main idea clearly."],
-[3,"Paragraph Organization","Transition word showing contrast?",["Furthermore","However","Therefore","Additionally"],1,"However = contrast."],
-[3,"Paragraph Organization","Concluding sentence should:",["Introduce new topic","Restate/summarize main idea","Ask a question","List details"],1,"Wraps up by reinforcing point."],
-[3,"Writing Process","Organizing ideas and outlining happens during?",["Drafting","Revising","Prewriting","Editing"],2,"Prewriting = brainstorm/outline."],
-[3,"Writing Process","Revising primarily involves?",["Fixing spelling","Improving content/structure/clarity","Adding title","Changing font"],1,"Big-picture improvements."],
-[3,"Active & Passive Voice","Active voice?",["Medication was administered by nurse.","Report was written yesterday.","Nurse administered medication.","Patient was examined."],2,"Subject performs action."],
-[3,"Active & Passive Voice","Passive voice?",["Doctor ordered blood work.","Surgeon performed operation.","Results were reviewed by lab.","She checked vitals."],2,"Subject receives action."],
+// === SCIENCE ===
+[2,"Balancing Equations","Which coefficients correctly balance: _Fe + _O\u2082 \u2192 _Fe\u2082O\u2083?",["1, 1, 1","2, 3, 1","4, 3, 2","3, 2, 2"],2,"4Fe + 3O\u2082 \u2192 2Fe\u2082O\u2083. Count: 4Fe and 6O each side."],
+[2,"Balancing Equations","In 2H\u2082 + O\u2082 \u2192 2H\u2082O, if 6 moles H\u2082 react completely, how many moles H\u2082O are produced?",["2","3","6","12"],2,"2:2 ratio. 6 moles H\u2082 \u2192 6 moles H\u2082O."],
+[2,"Balancing Equations","Balance: _CH\u2084 + _O\u2082 \u2192 _CO\u2082 + _H\u2082O. Coefficient for O\u2082?",["1","2","3","4"],1,"CH\u2084 + 2O\u2082 \u2192 CO\u2082 + 2H\u2082O."],
+[2,"Acids & Bases","Patient blood pH is 7.28 (normal 7.35-7.45). This indicates:",["Normal pH","Respiratory alkalosis","Acidosis","Alkalosis"],2,"Below 7.35 = acidosis."],
+[2,"Acids & Bases","HCl is a strong acid because it:",["Has high pH","Partially dissociates","Completely dissociates into H\u207A and Cl\u207B","Contains oxygen"],2,"Strong acids fully ionize in water."],
+[2,"Acids & Bases","A solution changes from pH 4 to pH 2. The H\u207A concentration has:",["Doubled","Halved","Increased 100-fold","Increased 10-fold"],2,"Each pH unit = 10\u00D7. Two units = 100\u00D7 more H\u207A."],
+[2,"Acids & Bases","A buffer solution resists changes in pH when small amounts of acid or base are added. Which body fluid acts as a buffer?",["Urine","Saliva","Blood (bicarbonate system)","Sweat"],2,"Blood uses bicarbonate buffering to maintain pH 7.35-7.45."],
+[2,"Phase Changes","During a phase change from liquid to gas, temperature:",["Increases rapidly","Decreases","Remains constant while energy is absorbed","Drops then rises"],2,"Latent heat: energy breaks intermolecular bonds, not raising temp."],
+[2,"Phase Changes","Latent heat of vaporization is energy required to:",["Raise liquid temperature","Change solid to liquid at constant temp","Change liquid to gas at constant temp","Cool gas to liquid"],2,"Latent heat of vaporization = liquid\u2192gas without temp change."],
+[2,"Phase Changes","On a heating curve, flat horizontal sections represent:",["Heating a single phase","Phase transitions at constant temp","Measurement errors","Cooling periods"],1,"Flat = phase change. Energy breaks bonds, not raising temp."],
+[2,"Phase Changes","Sweat cooling the body is an example of:",["Condensation","Sublimation","Evaporative cooling using latent heat","Radiation"],2,"Sweat absorbs latent heat from skin to evaporate."],
+[2,"Cell Division","During which mitosis phase do chromosomes line up at the cell's equator?",["Prophase","Metaphase","Anaphase","Telophase"],1,"Meta=middle. Chromosomes align at metaphase plate."],
+[2,"Cell Division","Crossing over occurs during:",["Prophase I of meiosis","Metaphase II","Anaphase of mitosis","G2 phase"],0,"Prophase I: homologous chromosomes exchange segments."],
+[2,"Cell Division","A cell with 46 chromosomes undergoes meiosis. Chromosomes per resulting cell?",["46","92","12","23"],3,"Meiosis halves: 46\u219223 (haploid)."],
+[2,"Cell Division","Which correctly distinguishes mitosis from meiosis?",["Mitosis: 4 cells; meiosis: 2","Mitosis maintains ploidy; meiosis reduces it","Both produce haploid cells","Meiosis occurs in somatic cells"],1,"Mitosis: diploid\u2192diploid. Meiosis: diploid\u2192haploid."],
+[2,"Cell Division","Sister chromatids separate during which phase?",["Prophase","Metaphase","Anaphase","G1"],2,"Anaphase: centromeres split, chromatids move to poles."],
+[2,"Macromolecules","A patient needs more protein. Which monomer will their body use more of?",["Monosaccharides","Amino acids","Fatty acids","Nucleotides"],1,"Proteins = polymers of amino acids."],
+[2,"Macromolecules","Glycogen stored in the liver is a polymer of:",["Fructose","Amino acids","Glucose","Nucleotides"],2,"Glycogen = glucose polymer for energy storage."],
+[2,"Macromolecules","Which macromolecule contains C, H, O, N, and P and carries genetic instructions?",["Carbohydrates","Lipids","Proteins","Nucleic acids"],3,"DNA/RNA contain C,H,O,N,P."],
+[2,"Macromolecules","Dehydration synthesis joins amino acids by removing:",["An oxygen atom","A water molecule","A carbon atom","A hydrogen ion"],1,"Removes H\u2082O to form peptide bonds."],
+[2,"Macromolecules","A triglyceride is composed of:",["3 amino acids + glycerol","3 glucose molecules","3 fatty acids + glycerol","3 nucleotides"],2,"Triglyceride = 3 fatty acid chains on glycerol backbone."],
+[2,"Endocrine System","The anterior pituitary releases all EXCEPT:",["Growth hormone","TSH","ADH","FSH"],2,"ADH = posterior pituitary. GH, TSH, FSH = anterior."],
+[2,"Endocrine System","Blood glucose is 250 mg/dL (normal 70-100). Which cells respond?",["Alpha cells release glucagon","Beta cells release insulin","Delta cells release somatostatin","Alpha cells release insulin"],1,"High glucose \u2192 beta cells release insulin."],
+[2,"Endocrine System","Glucagon's function:",["Lower glucose via cellular uptake","Raise glucose via liver glycogen breakdown","Stimulate protein synthesis","Promote fat storage"],1,"Glucagon breaks glycogen\u2192glucose\u2192raises blood sugar."],
+[2,"Endocrine System","The pituitary is the 'master gland' because it:",["Is the largest gland","Produces the most hormones","Regulates other glands via tropic hormones","Controls every body function directly"],2,"Releases TSH, ACTH, FSH, LH to control other glands."],
+[2,"Endocrine System","Type 1 diabetes results from destruction of:",["Alpha cells","Beta cells","Thyroid cells","Adrenal cells"],1,"Autoimmune destruction of beta cells \u2192 no insulin."],
+[2,"Disease Classification","Which is infectious?",["Type 2 diabetes","Tuberculosis","Osteoarthritis","Sickle cell anemia"],1,"TB = bacterial pathogen. Others are non-infectious."],
+[2,"Disease Classification","Non-infectious diseases are characterized by:",["Person-to-person transmission","Being caused by a pathogen","Not spreading between people","Always being acute"],2,"Cancer, diabetes, heart disease cannot spread."],
+[2,"Disease Classification","MRSA is dangerous primarily because it:",["Is a virus","Is resistant to many common antibiotics","Cannot be detected","Only affects immunocompromised"],1,"Methicillin-resistant Staph aureus resists multiple antibiotics."],
+[2,"Cardiovascular","Blood from lungs enters the heart through:",["Superior vena cava","Pulmonary arteries","Pulmonary veins \u2192 left atrium","Aorta"],2,"Oxygenated: lungs\u2192pulmonary veins\u2192left atrium."],
+[2,"Respiratory","SpO\u2082 of 88% (normal 95-100%) suggests:",["Normal gas exchange","Impaired alveolar gas exchange","Hyperventilation","Excess oxygen"],1,"Low SpO\u2082 = alveoli not effectively exchanging O\u2082/CO\u2082."],
+[2,"Nervous System","Damage to occipital lobe most likely impairs:",["Hearing","Motor control","Visual processing","Speech"],2,"Occipital lobe = primary visual center."],
+[2,"Digestive System","Bile's primary digestive role:",["Break down proteins","Emulsify fats into smaller droplets","Neutralize stomach acid","Absorb water"],1,"Bile emulsifies fats, increasing lipase surface area."],
+[2,"Immune System","Vaccines provide immunity by:",["Introducing active disease","Giving permanent pre-made antibodies","Stimulating production of antibodies and memory cells","Killing all bloodstream pathogens"],2,"Triggers active immunity: antibodies + memory B cells."],
+[2,"Musculoskeletal","Cardiac muscle is unique because it is:",["Voluntary and striated","Involuntary and smooth","Involuntary and striated","Voluntary and smooth"],2,"Striated (organized) but involuntary."],
+[2,"Scientific Reasoning","Group A gets drug; Group B gets sugar pill. Group B is the:",["Experimental group","Independent variable","Control group","Dependent variable"],2,"Placebo group = control for baseline comparison."],
+[2,"Scientific Reasoning","Correlation between coffee and lower depression means:",["Coffee cures depression","Cause-and-effect proven","Association exists but causation not proven","Depression causes coffee avoidance"],2,"Correlation \u2260 causation."],
+[2,"Scientific Reasoning","Repeated consistent trials improve:",["Validity","Reliability","Independent variable","Hypothesis"],1,"Consistent repeats = higher reliability."],
+[2,"Macromolecules","Select ALL monomers of macromolecules.",["Amino acids","Glucose","Nucleotides","Hemoglobin","Fatty acids"],[0,1,2,4],"AA\u2192proteins, glucose\u2192carbs, nucleotides\u2192nucleic acids, fatty acids\u2192lipids. Hemoglobin is a whole protein.",1],
+[2,"Cell Division","Select ALL true about meiosis.",["Produces 4 haploid cells","Crossing over in Prophase I","Occurs in somatic cells","Genetically unique daughters","Produces 2 diploid cells"],[0,1,3],"Meiosis: 4 haploid, unique cells. Somatic division = mitosis.",1],
+[2,"Endocrine System","Select ALL anterior pituitary hormones.",["Growth Hormone","Oxytocin","TSH","ADH","FSH"],[0,2,4],"GH, TSH, FSH = anterior. Oxytocin, ADH = posterior.",1],
+// === MATH ===
+[1,"Ratios & Tables","Clinic patients: Mon:45, Tue:30, Wed:60, Thu:40, Fri:50. Ratio of Wed to Mon (simplified)?",["4:3","3:2","2:1","60:45"],0,"60:45 \u00F7 15 = 4:3."],
+[1,"Ratios & Tables","Dose table: 50mg/25kg, 100mg/50kg, 150mg/75kg. Dose for 60kg patient?",["110mg","120mg","125mg","130mg"],1,"Rate=2mg/kg. 60\u00D72=120mg."],
+[1,"Ratios & Tables","Enrollment: 2022:800, 2023:920. Percent increase?",["12%","15%","18%","20%"],1,"120/800=0.15=15%."],
+[1,"Multi-Step Problems","IV bag: 1,000mL at 125mL/hr. Started 0800. Replace at?",["1200","1400","1600","1800"],2,"1000\u00F7125=8hrs. 0800+8=1600."],
+[1,"Multi-Step Problems","2.5mL medication 3\u00D7/day for 14 days. Total mL needed?",["42","52.5","75","105"],3,"2.5\u00D73=7.5/day. 7.5\u00D714=105mL."],
+[1,"Multi-Step Problems","Drug dosed at 5mg/kg. Patient: 176lbs (1kg=2.2lbs). Dose?",["350mg","400mg","440mg","500mg"],1,"176\u00F72.2=80kg. 80\u00D75=400mg."],
+[1,"Multi-Step Problems","Dosage formula: (Desired/Have)\u00D7Quantity. D=250mg, H=500mg, Q=10mL.",["2.5mL","5mL","10mL","25mL"],1,"(250/500)\u00D710=5mL."],
+[1,"Statistics","Temps (\u00B0F): 98.2, 99.1, 101.3, 98.6, 100.4, 99.8, 102.1. Median?",["99.1","99.8","100.4","101.3"],1,"Ordered middle (4th of 7)=99.8."],
+[1,"Statistics","From same data, range?",["2.9","3.1","3.9","4.1"],2,"102.1-98.2=3.9."],
+[1,"Statistics","Scores: 72,85,85,90,93,68,85. If 68 removed, does median change?",["No, stays 85","Yes, increases to 87.5","Yes, decreases","Cannot determine"],0,"Both medians=85. Removing 68 doesn't shift middle."],
+[1,"Statistics","Range=40, minimum=15. Maximum?",["25","40","55","60"],2,"40=max-15. Max=55."],
+[1,"Geometry","Circular wound radius 3cm. Area? (\u03C0=3.14)",["9.42cm\u00B2","18.84cm\u00B2","28.26cm\u00B2","56.52cm\u00B2"],2,"A=\u03C0r\u00B2=3.14\u00D79=28.26."],
+[1,"Geometry","Storage box 30\u00D720\u00D715cm. Volume?",["650cm\u00B3","900cm\u00B3","6,000cm\u00B3","9,000cm\u00B3"],3,"V=lwh=30\u00D720\u00D715=9,000."],
+[1,"Geometry","Triangular bandage: base 40cm, height 25cm. Area?",["500cm\u00B2","650cm\u00B2","1,000cm\u00B2","1,250cm\u00B2"],0,"A=\u00BDbh=\u00BD\u00D740\u00D725=500."],
+[1,"Geometry","Arm circumference 31.4cm. Diameter? (\u03C0\u22483.14)",["5cm","10cm","15cm","20cm"],1,"C=\u03C0d. d=31.4/3.14=10."],
+[1,"Fractions","Patient drinks 2/3 of 12oz at breakfast + 3/4 of 12oz at lunch. Total?",["14oz","15oz","17oz","18oz"],2,"8+9=17oz."],
+[1,"Fractions","3/4 cup Solution A per 1/2 cup Solution B. Ratio simplified?",["3:2","4:3","6:4","3:4"],0,"3/4 \u00F7 1/2 = 3/2 = 3:2."],
+[1,"Percentages","Infection rate: 8%\u21925%. Relative percent decrease?",["3%","37.5%","62.5%","60%"],1,"(8-5)/8\u00D7100=37.5%."],
+[1,"Percentages","Item: 20% off, then additional 10% off sale price. Original $80. Final?",["$56","$57.60","$60","$64"],1,"80\u00D7.80=$64. 64\u00D7.90=$57.60. Discounts don't add."],
+[1,"Algebra","500mL of 10% saline. Need 4%. Using C\u2081V\u2081=C\u2082V\u2082, final volume?",["1,000mL","1,250mL","1,500mL","2,000mL"],1,"10\u00D7500=4\u00D7V. V=1,250mL."],
+[1,"Conversions","Patient temp 39.5\u00B0C. Convert to \u00B0F (F=C\u00D79/5+32).",["101.1\u00B0F","102.5\u00B0F","103.1\u00B0F","104.2\u00B0F"],2,"39.5\u00D79/5=71.1+32=103.1."],
+[1,"Conversions","Dose needs 0.5g. Tablets are 125mg each. How many?",["2","3","4","5"],2,"500mg\u00F7125=4."],
+[1,"Inequalities","Solve: 2x+5>11",["x>3","x>8","x<3","x>6"],0,"2x>6, x>3."],
+[1,"Comparing Numbers","Least to greatest?",["0.5, 1/3, 0.75, 2/3","1/3, 0.5, 2/3, 0.75","0.75, 2/3, 0.5, 1/3","2/3, 1/3, 0.75, 0.5"],1,".33, .5, .67, .75."],
+[1,"Statistics","Select ALL measures of central tendency.",["Mean","Range","Median","Standard deviation","Mode"],[0,2,4],"Mean/median/mode=center. Range/SD=spread.",1],
+// === READING ===
+[0,"Schedule Reading","Bus Route 7 \u2014 Downtown: 6:00,6:45,7:30. Hospital: 6:20,7:05,7:50. University: 6:40,7:25,8:10. Latest bus from Downtown to arrive at University by 7:30?",["6:00","6:45","7:30","None will work"],1,"6:45\u2192University 7:25 (before 7:30). 7:30 bus arrives 8:10 (late)."],
+[0,"Schedule Reading","TV: Ch2-World News, Ch5-Cooking Masters, Ch8-Political Roundtable, Ch11-Nature Doc. Which discusses national politics?",["Ch 2","Ch 5","Ch 8","Ch 11"],2,"Political Roundtable = political focus."],
+[0,"Schedule Reading","Directory: Suite 101-Radiology, Suite 102-Lab, Suite 205-Cardiology, Suite 310-Neurology. Patient on 1st floor needs bloodwork. Where?",["101","102","205","310"],1,"Lab (102) handles bloodwork, 1st floor."],
+[0,"Main Idea","'EHRs reduced certain errors but introduced new ones\u2014alert fatigue from constant warnings and copy-paste errors propagating outdated info.' Main idea:",["EHRs eliminated errors","EHRs solved problems but created new ones","Clinicians are careless","Copy-paste should be banned"],1,"Fixed some errors, introduced different ones."],
+[0,"Main Idea","'A 2024 meta-analysis of 47 studies found telehealth equivalent to in-person for chronic disease management, though satisfaction varied by digital literacy and internet access.' Main idea:",["Telehealth is inferior","All patients prefer telehealth","Telehealth matches in-person outcomes but access is a factor","Internet is the only barrier"],2,"Equivalent outcomes, satisfaction varies by access."],
+[0,"Author's Purpose","'Nurses are the largest healthcare workforce segment, yet only 19% of hospital CEOs have nursing backgrounds. We must elevate nursing voices in leadership.' Purpose:",["Inform about CEO stats","Persuade that nurses should lead more","Entertain","Compare nurses to doctors"],1,"'We must' = persuasive call to action."],
+[0,"Inference","'After controlling for age, BMI, and smoking, participants consuming 3+ servings of processed meat weekly had 42% higher colorectal cancer incidence.' Infer:",["Processed meat causes cancer in everyone","Researchers accounted for other risk factors","BMI has no effect","Smoking is protective"],1,"'Controlling for' = isolated the variable."],
+[0,"Inference","Nursing applications up 35% but seats up only 4% over 5 years. Infer:",["Programs are easier to enter","Competition is intensifying","Fewer want to be nurses","Hospitals hiring fewer nurses"],1,"Demand far outpacing supply = more competitive."],
+[0,"Context Clues","'The wound was necrotic\u2014black tissue, foul odor, no blood flow.' Necrotic means:",["Healing","Infected","Dead tissue","Inflamed"],2,"Black, no blood flow, foul odor = tissue death."],
+[0,"Context Clues","'Treatment proved palliative rather than curative; managed pain but didn't eliminate the disease.' Palliative:",["Complete cure","Relieving symptoms without curing","Experimental","Surgical"],1,"'Rather than curative' + managed symptoms."],
+[0,"Evaluating Arguments","'Essential oils cure anxiety because my patients feel calmer after lavender.' This is weak because:",["Lavender smells bad","Oils are expensive","Anecdotal evidence doesn't establish causation","Blog is online"],2,"Personal anecdotes \u2260 scientific evidence."],
+[0,"Evaluating Arguments","Best evidence for 'hand hygiene reduces hospital infections':",["A nurse says it's important","A poster promotes it","RCT showing 47% reduction after protocols","Patient survey"],2,"RCTs with measurable outcomes = strongest evidence."],
+[0,"Text Structure","'Sleep deprivation impairs cognition. After 24hrs without sleep, reaction time drops 50%, like BAC of 0.10%. Consequently, institutions limit resident hours.' Structure:",["Compare/contrast","Problem/solution","Cause and effect","Narrative"],2,"Deprivation(cause)\u2192impairment(effect)\u2192policy(effect)."],
+[0,"Logical Conclusion","Drug label: 'Take with food. May cause drowsiness. Don't combine with alcohol.' Patient takes on empty stomach with wine, then drives. Conclusions:",["Only driving is a problem","Patient violated all three instructions","Followed label correctly","Food is only concern"],1,"Empty stomach + wine + driving = all three violated."],
+[0,"Fact vs Opinion","'CDC: handwashing reduces respiratory illness 16-21%. Clearly, sanitizer stations should replace soap in all hospitals.' Opinion part:",["Handwashing reduces illness","CDC reported statistic","Sanitizer should replace soap","Both are facts"],2,"'Should replace' is subjective recommendation."],
+[0,"Tone","'Despite billions in cancer research, pancreatic cancer survival is devastatingly low at 12%. One must question whether funding is allocated effectively.' Tone:",["Celebratory","Neutral","Critically questioning","Humorous"],2,"'Devastatingly' + 'must question' = critical."],
+[0,"Primary Source","Nursing student researching wound care. Strongest primary source:",["Wikipedia article","Textbook chapter","Original peer-reviewed clinical trial","News summary"],2,"Original trial = firsthand research."],
+[0,"Supporting Details","Select ALL supporting details from: 'Chronic sleep deprivation increases cortisol, impairs memory, weakens immunity, raises cardiovascular risk.'",["Increases cortisol","Impairs memory","Weakens immunity","Sleep is important","Raises CV risk"],[0,1,2,4],"Four specific effects are details. 'Sleep is important' isn't in the passage.",1],
+// === ENGLISH ===
+[3,"Semicolon vs Colon","Correctly punctuated:",["Patient has three symptoms: fever, cough, fatigue.","Patient has three symptoms; fever, cough, fatigue.","Patient has three symptoms, fever, cough, fatigue.","Patient has three symptoms fever cough fatigue."],0,"Colon introduces list after complete clause."],
+[3,"Semicolon vs Colon","Correctly punctuated:",["Lab results were abnormal, doctor ordered more tests.","Lab results were abnormal; the doctor ordered more tests.","Lab results were abnormal: the doctor ordered more tests.","Lab results were abnormal the doctor ordered more tests."],1,"Semicolon joins two independent clauses."],
+[3,"Semicolon vs Colon","Correct colon usage:",["She excels at: running and swimming.","The study concluded the following: exercise reduces mortality by 30%.","The nurse: checked vitals.","Remember: to take your medication."],1,"Colon after complete clause introducing info."],
+[3,"Semicolon vs Colon","Correct:",["Meeting at 3:00; please don't be late.","Meeting at 3;00, don't be late.","Meeting at 3:00, please don't be late.","Meeting at 3:00: please don't be late."],0,"Semicolon joins independent clauses. Comma alone = splice."],
+[3,"Subject-Verb Agreement","'The group of nursing students ___ required to complete 500 clinical hours.'",["are","were","is","have been"],2,"'Group' (singular) is subject, not 'students.'\u2192is."],
+[3,"Subject-Verb Agreement","'Neither the physician nor the residents ___ available.'",["is","was","were","has been"],2,"Neither/nor: verb agrees with nearer subject (residents=plural)\u2192were."],
+[3,"Subject-Verb Agreement","'The accuracy of the test results ___ on proper collection.'",["depend","are depending","depends","have depended"],2,"'Accuracy' (singular) is subject.\u2192depends."],
+[3,"Subject-Verb Agreement","'Each of the medications ___ a different side effect profile.'",["have","carry","has","are having"],2,"'Each' always singular\u2192has."],
+[3,"Sentence Structure","'Although the patient improved significantly, the physician recommended monitoring because secondary infections remain a risk.' This is:",["Simple","Run-on","Compound-complex","Fragment"],2,"Dependent(Although...)+independent(physician...)+dependent(because...)."],
+[3,"Grammar","'The nurse who gave the incorrect dose, along with her supervisor, ___ been placed on leave.'",["have","has","were","are"],1,"Subject='nurse'(singular). 'Along with'\u2260compound subject.\u2192has."],
+[3,"Punctuation","Nurse documents: 'Patient: acute chest pain radiating to left arm, diaphoresis, SOB; vitals BP 180/95, HR 110, SpO2 92%.' Semicolon correct because:",["Separates list items","Joins two related independent descriptions","Replaces period","Introduces definition"],1,"Symptoms and vitals are two independent observations."],
+[3,"Vocabulary","'Tachy-' in tachycardia means:",["Slow","Fast","Painful","Large"],1,"Tachy=fast (>100bpm). Brady=slow."],
+[3,"Word Parts","'-ectomy' means:",["Inflammation","Surgical removal","Study of","Condition of"],1,"Appendectomy, cholecystectomy = removal."],
+[3,"Word Parts","'Hyponatremia' means low sodium. 'Hypo-' means:",["Above","Below normal","Around","Within"],1,"Hypo=below. Hyper=above."],
+[3,"Word Parts","'Cardiomyopathy' = disease of heart ___.",["bones","nerves","muscle","blood"],2,"Myo=muscle. Heart muscle disease."],
+[3,"Audience Awareness","Best for patient chart:",["Pt seems kinda tired today","Patient reports fatigue, appears lethargic; oriented to person and place only","Poor patient looks exhausted, I feel bad","Patient is super sleepy"],1,"Objective clinical language, measurable observations."],
+[3,"Audience Awareness","Discharge instructions for limited health literacy:",["Take prescribed antihypertensive per pharmacological regimen.","Take your blood pressure pill once every morning with breakfast.","Administer 10mg Lisinopril PO QD.","Take meds as discussed."],1,"Simple, clear, specific for the audience."],
+[3,"Paragraph Organization","Best cause-effect transition?",["However","Furthermore","As a result","Similarly"],2,"'As a result' signals effect of what came before."],
+[3,"Writing Process","Revising focuses on:",["Spelling and punctuation","Content, structure, and clarity","Choosing a topic","Formatting"],1,"Revising=big picture. Editing=surface."],
+[3,"Active vs Passive","Active voice:",["BP was checked by the NA.","Medication was given at 0800.","The physician ordered a CT scan.","Lab results were reviewed."],2,"Subject(physician) performs action(ordered)."],
+[3,"Punctuation","Select ALL correctly punctuated.",["Patient is stable; however, we will continue monitoring.","The doctor said, \"Take your medication.\"","Its important to wash hands.","Supplies needed: gloves, gowns, masks.","The doctor who is on call will see you."],[0,1,3,4],"'Its' should be 'It's.' All others correct.",1],
+[3,"Word Parts","Select ALL prefixes meaning 'below/under.'",["hypo-","sub-","hyper-","supra-","infra-"],[0,1,4],"Hypo/sub/infra=below. Hyper/supra=above.",1],
 ];
 
-const QUESTIONS=QD.map((d,i)=>({id:"q"+i,section:SN[d[0]],topic:d[1],question:d[2],options:d[3],correctIndex:d[4],explanation:d[5]}));
+const QS=QD.map((d,i)=>({id:"q"+i,section:SN[d[0]],topic:d[1],question:d[2],options:d[3],correctIndex:d[4],explanation:d[5],sata:d.length>6&&d[6]===1}));
+function sh(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=0|Math.random()*(i+1);[b[i],b[j]]=[b[j],b[i]];}return b;}
+const DS=()=>({tq:0,tc:0,sec:Object.fromEntries(SN.map(s=>[s,{a:0,c:0,t:{}}])),h:[],sk:0,ld:null});
+const LK="ctv4";function ld(){try{const d=localStorage.getItem(LK);return d?JSON.parse(d):DS();}catch{return DS();}}function sv(s){try{localStorage.setItem(LK,JSON.stringify(s));}catch{}}
 
-function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}return b;}
-const DS=()=>({totalQuestions:0,totalCorrect:0,sections:Object.fromEntries(SN.map(s=>[s,{asked:0,correct:0,topics:{}}])),quizHistory:[],streak:0,lastStudyDate:null});
+function gm(st){const r=[];SN.forEach(sec=>{[...new Set(QS.filter(q=>q.section===sec).map(q=>q.topic))].forEach(tp=>{const d=st.sec[sec]?.t[tp]||{a:0,c:0};const p=d.a>0?Math.round(d.c/d.a*100):-1;r.push({section:sec,topic:tp,pct:p,asked:d.a,status:d.a===0?"new":p>=85?"strong":p>=70?"ok":"weak"});});});return r;}
 
-// Storage
-const LS_KEY="corey-teas-v3";
-function loadStats(){try{const d=localStorage.getItem(LS_KEY);return d?JSON.parse(d):DS();}catch{return DS();}}
-function saveStats(s){try{localStorage.setItem(LS_KEY,JSON.stringify(s));}catch(e){console.error(e);}}
+function gwq(st,n){const m=gm(st),pri=[...m.filter(x=>x.status==="weak").sort((a,b)=>a.pct-b.pct),...m.filter(x=>x.status==="new"),...m.filter(x=>x.status==="ok").sort((a,b)=>a.pct-b.pct)];
+const pk=[],us=new Set();for(const p of pri){if(pk.length>=n)break;const pl=QS.filter(q=>q.section===p.section&&q.topic===p.topic&&!us.has(q.id));sh(pl).slice(0,p.status==="weak"?4:p.status==="new"?3:2).forEach(q=>{if(pk.length<n){pk.push(q);us.add(q.id);}});}
+if(pk.length<n)sh(QS.filter(q=>!us.has(q.id))).slice(0,n-pk.length).forEach(q=>pk.push(q));return sh(pk);}
 
-// Mastery
-function getTopicMastery(stats){
-  const r=[];
-  SN.forEach(sec=>{
-    const allT=[...new Set(QUESTIONS.filter(q=>q.section===sec).map(q=>q.topic))];
-    const topics=stats.sections[sec]?.topics||{};
-    allT.forEach(topic=>{
-      const d=topics[topic]||{asked:0,correct:0};
-      const pct=d.asked>0?Math.round((d.correct/d.asked)*100):-1;
-      const status=d.asked===0?"new":pct>=85?"strong":pct>=70?"ok":"weak";
-      r.push({section:sec,topic,pct,asked:d.asked,status});
-    });
-  });
-  return r;
-}
+// Ring
+function Rg({pct:p,size:sz=48,stroke:st=5,color:cl,label:lb,sub:sb}){const r=(sz-st)/2,ci=2*Math.PI*r,v=Math.max(0,Math.min(100,p)),of=ci-(v/100)*ci,c=cl||(v>=85?"#4FCF7F":v>=70?"#F7A94F":v>=0?"#F76F6F":"#333");
+return h("div",{style:{display:"flex",flexDirection:"column",alignItems:"center",gap:2}},h("div",{style:{position:"relative",width:sz,height:sz}},h("svg",{width:sz,height:sz,style:{transform:"rotate(-90deg)"}},h("circle",{cx:sz/2,cy:sz/2,r,fill:"none",stroke:"#222",strokeWidth:st}),h("circle",{cx:sz/2,cy:sz/2,r,fill:"none",stroke:c,strokeWidth:st,strokeDasharray:ci,strokeDashoffset:p<0?ci:of,strokeLinecap:"round",style:{transition:"stroke-dashoffset .8s"}})),h("div",{style:{position:"absolute",top:0,left:0,width:sz,height:sz,display:"flex",alignItems:"center",justifyContent:"center"}},h("span",{style:{fontSize:sz>50?14:11,fontWeight:800,color:c}},p>=0?v+"%":"\u2014"))),lb&&h("span",{style:{fontSize:10,color:"#888",textAlign:"center"}},lb),sb&&h("span",{style:{fontSize:9,color:"#555"}},sb));}
 
-function getWeakQuestions(stats,count){
-  const m=getTopicMastery(stats);
-  const weak=m.filter(x=>x.status==="weak").sort((a,b)=>a.pct-b.pct);
-  const nw=m.filter(x=>x.status==="new");
-  const ok=m.filter(x=>x.status==="ok").sort((a,b)=>a.pct-b.pct);
-  const pri=[...weak,...nw,...ok];
-  const picked=[],used=new Set();
-  for(const p of pri){
-    if(picked.length>=count)break;
-    const pool=QUESTIONS.filter(q=>q.section===p.section&&q.topic===p.topic&&!used.has(q.id));
-    const take=p.status==="weak"?4:p.status==="new"?3:2;
-    shuffle(pool).slice(0,take).forEach(q=>{if(picked.length<count){picked.push(q);used.add(q.id);}});
-  }
-  if(picked.length<count)shuffle(QUESTIONS.filter(q=>!used.has(q.id))).slice(0,count-picked.length).forEach(q=>picked.push(q));
-  return shuffle(picked);
-}
+function MB({topic:tp,pct:p,asked:a}){const c=p>=85?"#4FCF7F":p>=70?"#F7A94F":p>=0?"#F76F6F":"#333",st=a===0?"NEW":p>=85?"\u2705 MASTERED":p>=70?"\uD83D\uDFE1 OK":"\uD83D\uDD34 WEAK";
+return h("div",{className:"mbar",style:{backgroundColor:c+"12",border:"1px solid "+c+"22"}},h("div",{style:{display:"flex",justifyContent:"space-between",marginBottom:4}},h("span",{style:{fontSize:11,color:"#ccc"}},tp),h("span",{style:{fontSize:9,fontWeight:700,color:c}},st)),h("div",{className:"bar-out"},h("div",{className:"bar-in",style:{width:Math.max(0,p)+"%",backgroundColor:c}})),h("div",{style:{display:"flex",justifyContent:"space-between",marginTop:2}},h("span",{style:{fontSize:9,color:"#555"}},a+"Q"),h("span",{style:{fontSize:9,color:c,fontWeight:700}},p>=0?p+"%":"")));}
 
-// Ring component
-function Ring({pct,size=48,stroke=5,color,label,sub}){
-  const r=(size-stroke)/2,circ=2*Math.PI*r,p=Math.max(0,Math.min(100,pct));
-  const off=circ-(p/100)*circ;
-  const cl=color||(p>=85?"#4FCF7F":p>=70?"#F7A94F":p>=0?"#F76F6F":"#333");
-  return e("div",{style:{display:"flex",flexDirection:"column",alignItems:"center",gap:2}},
-    e("div",{style:{position:"relative",width:size,height:size}},
-      e("svg",{width:size,height:size,style:{transform:"rotate(-90deg)"}},
-        e("circle",{cx:size/2,cy:size/2,r,fill:"none",stroke:"#222",strokeWidth:stroke}),
-        e("circle",{cx:size/2,cy:size/2,r,fill:"none",stroke:cl,strokeWidth:stroke,strokeDasharray:circ,strokeDashoffset:pct<0?circ:off,strokeLinecap:"round",style:{transition:"stroke-dashoffset .8s ease"}})),
-      e("div",{style:{position:"absolute",top:0,left:0,width:size,height:size,display:"flex",alignItems:"center",justifyContent:"center"}},
-        e("span",{style:{fontSize:size>50?14:11,fontWeight:800,color:cl}},pct>=0?p+"%":"—"))),
-    label&&e("span",{style:{fontSize:10,color:"#888",textAlign:"center",maxWidth:size+20,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}},label),
-    sub&&e("span",{style:{fontSize:9,color:"#555"}},sub));
-}
+function Clc({onClose:oc}){const[d,sD]=S("0"),[pv,sP]=S(null),[op,sO]=S(null),[fr,sF]=S(true);
+const ip=n=>{if(fr){sD(n==="."?"0.":n);sF(false);}else{if(n==="."&&d.includes("."))return;sD(d+n);}};
+const dO=nx=>{const c=parseFloat(d);if(pv!==null&&op&&!fr){let r;switch(op){case"+":r=pv+c;break;case"-":r=pv-c;break;case"\u00D7":r=pv*c;break;case"\u00F7":r=c?pv/c:"Err";break;default:r=c;}sP(typeof r==="number"?r:null);sD(String(typeof r==="number"?parseFloat(r.toFixed(8)):r));}else sP(c);sO(nx);sF(true);};
+const B=(l,f,a,dk,w)=>h("button",{className:"calc-btn",onClick:f,style:{gridColumn:w?"span 2":"",backgroundColor:a?"#4F9CF7":dk?"#2a2a2e":"#3a3a3e"}},l);
+return h("div",{className:"calc"},h("div",{style:{display:"flex",justifyContent:"space-between",marginBottom:6}},h("span",{style:{fontSize:11,color:"#888"}},"Calc"),h("button",{onClick:oc,style:{background:"none",border:"none",color:"#888"}},"\u2715")),h("div",{style:{background:"#0d0d0f",borderRadius:6,padding:"8px",textAlign:"right",fontSize:22,fontWeight:700,marginBottom:6,overflow:"hidden"}},d),h("div",{style:{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:3}},B("C",()=>{sD("0");sP(null);sO(null);sF(true);},0,1),B("\u00B1",()=>sD(String(-parseFloat(d))),0,1),B("%",()=>sD(String(parseFloat(d)/100)),0,1),B("\u00F7",()=>dO("\u00F7"),1),B("7",()=>ip("7")),B("8",()=>ip("8")),B("9",()=>ip("9")),B("\u00D7",()=>dO("\u00D7"),1),B("4",()=>ip("4")),B("5",()=>ip("5")),B("6",()=>ip("6")),B("-",()=>dO("-"),1),B("1",()=>ip("1")),B("2",()=>ip("2")),B("3",()=>ip("3")),B("+",()=>dO("+"),1),B("0",()=>ip("0"),0,0,1),B(".",()=>ip(".")),B("=",()=>{if(op){dO(null);sO(null);}},1)));}
 
-// MasteryBar
-function MasteryBar({topic,pct,asked}){
-  const cl=pct>=85?"#4FCF7F":pct>=70?"#F7A94F":pct>=0?"#F76F6F":"#333";
-  const st=asked===0?"NEW":pct>=85?"MASTERED":pct>=70?"OK":"WEAK";
-  const bg=pct>=85?"#4FCF7F15":pct>=70?"#F7A94F15":pct>=0?"#F76F6F15":"#22222255";
-  return e("div",{className:"mbar",style:{backgroundColor:bg,border:"1px solid "+cl+"22"}},
-    e("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:4}},
-      e("span",{style:{fontSize:12,color:"#ccc",fontWeight:500}},topic),
-      e("span",{style:{fontSize:10,fontWeight:700,color:cl,padding:"1px 6px",borderRadius:4,backgroundColor:cl+"22"}},st)),
-    e("div",{className:"bar-out"},e("div",{className:"bar-in",style:{width:Math.max(0,pct)+"%",backgroundColor:cl}})),
-    e("div",{style:{display:"flex",justifyContent:"space-between",marginTop:2}},
-      e("span",{style:{fontSize:9,color:"#555"}},asked+" attempted"),
-      e("span",{style:{fontSize:9,color:cl,fontWeight:700}},pct>=0?pct+"%":"Not started")));
-}
+// Quiz Engine w/ SATA
+function QE({questions:qs,onDone:od,sColor:sc}){
+const[cr,sC]=S(0),[sl,sS]=S(null),[sa,sSA]=S([]),[sw,sSW]=S(false),[rs,sR]=S([]),[cl,sCl]=S(false);
+const q=qs[cr];if(!q)return null;const im=q.section==="Math",is=q.sata,co=sc||SC[q.section];
+const amc=i=>{if(sl!==null)return;sS(i);sSW(true);sR(p=>[...p,{...q,ua:i,correct:i===q.correctIndex}]);};
+const tsa=i=>{if(sw)return;sSA(p=>p.includes(i)?p.filter(x=>x!==i):[...p,i]);};
+const ssa=()=>{const ok=Array.isArray(q.correctIndex)&&sa.length===q.correctIndex.length&&sa.every(i=>q.correctIndex.includes(i));sSW(true);sR(p=>[...p,{...q,ua:sa,correct:ok}]);};
+const nx=()=>{if(cr+1>=qs.length){od(rs);return;}sC(c=>c+1);sS(null);sSA([]);sSW(false);};
+return h("div",{id:"root"},h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:4}},h("button",{className:"back",onClick:()=>od(rs,true)},"\u2715"),h("span",{style:{color:"#888",fontSize:12,fontWeight:600}},(cr+1)+"/"+qs.length),h("div",{style:{display:"flex",gap:5,alignItems:"center"}},im&&h("button",{onClick:()=>sCl(!cl),style:{background:"none",border:"1px solid #444",borderRadius:5,padding:"2px 6px",fontSize:10,color:"#F7A94F"}},"\uD83D\uDD22"),h("span",{style:{fontSize:10,fontWeight:600,padding:"2px 7px",borderRadius:12,backgroundColor:SC[q.section]+"22",color:SC[q.section]}},SI[q.section]))),
+h("div",{className:"prog"},h("div",{className:"prog-in",style:{width:((cr+1)/qs.length*100)+"%",backgroundColor:co}})),
+h("div",{className:"card"},h("div",{style:{fontSize:10,color:"#888",textTransform:"uppercase",letterSpacing:".5px",marginBottom:3}},q.topic),is&&h("div",{className:"sata"},"SELECT ALL THAT APPLY \u2014 No partial credit"),h("p",{style:{fontSize:14,lineHeight:1.7,color:"#e0e0e0",margin:"0 0 14px",fontWeight:500}},q.question),
+h("div",{style:{display:"flex",flexDirection:"column",gap:6}},q.options.map((o,i)=>{
+if(is){const ck=sa.includes(i);let bg="transparent",bd="#333",c2="#e0e0e0",cb="transparent",cd="#555";
+if(sw){const ic=Array.isArray(q.correctIndex)&&q.correctIndex.includes(i);if(ic){bg="#4FCF7F15";bd="#4FCF7F";c2="#4FCF7F";cb="#4FCF7F";cd="#4FCF7F";}else if(ck){bg="#F76F6F15";bd="#F76F6F";c2="#F76F6F";cb="#F76F6F";cd="#F76F6F";}}else if(ck){bd="#4F9CF7";cb="#4F9CF7";cd="#4F9CF7";}
+return h("button",{key:i,className:"opt",onClick:()=>tsa(i),style:{backgroundColor:bg,borderColor:bd,color:c2}},h("div",{style:{width:20,height:20,borderRadius:4,border:"1.5px solid "+cd,backgroundColor:cb,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,color:"#fff",flexShrink:0}},ck||(sw&&Array.isArray(q.correctIndex)&&q.correctIndex.includes(i))?"\u2713":""),o);}
+else{let bg="transparent",bd="#333",c2="#e0e0e0";if(sl!==null){if(i===q.correctIndex){bg="#4FCF7F15";bd="#4FCF7F";c2="#4FCF7F";}else if(i===sl){bg="#F76F6F15";bd="#F76F6F";c2="#F76F6F";}}
+return h("button",{key:i,className:"opt",onClick:()=>amc(i),disabled:sl!==null,style:{backgroundColor:bg,borderColor:bd,color:c2}},h("span",{style:{width:22,height:22,borderRadius:6,border:"1.5px solid "+bd,display:"flex",alignItems:"center",justifyContent:"center",fontSize:10,fontWeight:700,flexShrink:0,color:bd}},String.fromCharCode(65+i)),o);}})),
+is&&!sw&&sa.length>0&&h("button",{className:"btn",onClick:ssa,style:{width:"100%",marginTop:9}},"Submit Answer"),
+sw&&h("div",{style:{backgroundColor:"#1a2a1a",border:"1px solid #4FCF7F33",borderRadius:8,padding:"9px 11px",marginTop:9,fontSize:12,lineHeight:1.7,color:"#bbb"}},"\uD83D\uDCA1 "+q.explanation),
+(sl!==null||sw)&&h("button",{className:"btn",onClick:nx,style:{width:"100%",marginTop:9}},cr+1>=qs.length?"See Results":"Next \u2192")),
+cl&&h(Clc,{onClose:()=>sCl(false)}));}
 
-// Calculator
-function Calc({onClose}){
-  const [d,setD]=useState("0"),[pv,setPv]=useState(null),[op,setOp]=useState(null),[fr,setFr]=useState(true);
-  const inp=n=>{if(fr){setD(n==="."?"0.":n);setFr(false);}else{if(n==="."&&d.includes("."))return;setD(d+n);}};
-  const doOp=nx=>{const cur=parseFloat(d);if(pv!==null&&op&&!fr){let r;switch(op){case"+":r=pv+cur;break;case"-":r=pv-cur;break;case"×":r=pv*cur;break;case"÷":r=cur!==0?pv/cur:"Err";break;default:r=cur;}setPv(typeof r==="number"?r:null);setD(String(typeof r==="number"?parseFloat(r.toFixed(8)):r));}else{setPv(cur);}setOp(nx);setFr(true);};
-  const B=(l,oc,a,dk,w)=>e("button",{className:"calc-btn",onClick:oc,style:{gridColumn:w?"span 2":"span 1",backgroundColor:a?"#4F9CF7":dk?"#2a2a2e":"#3a3a3e"}},l);
-  return e("div",{className:"calc"},
-    e("div",{style:{display:"flex",justifyContent:"space-between",marginBottom:6}},e("span",{style:{fontSize:11,color:"#888",fontWeight:600}},"🔢 Calc"),e("button",{onClick:onClose,style:{background:"none",border:"none",color:"#888",fontSize:14,cursor:"pointer"}},"✕")),
-    e("div",{style:{background:"#0d0d0f",borderRadius:6,padding:"8px 10px",marginBottom:6,textAlign:"right",fontSize:22,fontWeight:700,color:"#e0e0e0",fontVariantNumeric:"tabular-nums",overflow:"hidden"}},d),
-    e("div",{style:{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:3}},
-      B("C",()=>{setD("0");setPv(null);setOp(null);setFr(true);},0,1),B("±",()=>setD(String(parseFloat(d)*-1)),0,1),B("%",()=>setD(String(parseFloat(d)/100)),0,1),B("÷",()=>doOp("÷"),1),
-      B("7",()=>inp("7")),B("8",()=>inp("8")),B("9",()=>inp("9")),B("×",()=>doOp("×"),1),
-      B("4",()=>inp("4")),B("5",()=>inp("5")),B("6",()=>inp("6")),B("-",()=>doOp("-"),1),
-      B("1",()=>inp("1")),B("2",()=>inp("2")),B("3",()=>inp("3")),B("+",()=>doOp("+"),1),
-      B("0",()=>inp("0"),0,0,1),B(".",()=>inp(".")),B("=",()=>{if(op){doOp(null);setOp(null);}},1)));
-}
+function Res({results:rs,onAgain:oa,onHome:oh,onReview:or,title:tt}){const co=rs.filter(r=>r.correct).length,pc=rs.length?Math.round(co/rs.length*100):0,bs={};rs.forEach(r=>{if(!bs[r.section])bs[r.section]={t:0,c:0};bs[r.section].t++;if(r.correct)bs[r.section].c++;});const ms=rs.filter(r=>!r.correct),wt=[...new Set(ms.map(r=>r.topic))];
+return h("div",{id:"root"},h("div",{className:"card",style:{textAlign:"center"}},h("div",{style:{fontSize:48,marginBottom:4}},pc>=80?"\uD83C\uDF89":pc>=60?"\uD83D\uDC4D":"\uD83D\uDCAA"),tt&&h("div",{style:{fontSize:11,color:"#888",marginBottom:3}},tt),h(Rg,{pct:pc,size:80,stroke:7}),h("h2",{style:{margin:"6px 0",fontSize:22,fontWeight:800}},co+"/"+rs.length),h("p",{style:{color:"#888",fontSize:12,marginBottom:12}},pc>=80?"Excellent!":pc>=60?"Review missed.":"These are exam-level. Keep grinding."),
+Object.keys(bs).length>1&&h("div",{style:{textAlign:"left",marginBottom:10}},Object.entries(bs).map(([s,d])=>h("div",{key:s,style:{display:"flex",justifyContent:"space-between",padding:"5px 0",borderBottom:"1px solid #1e1e22",fontSize:12}},h("span",null,SI[s]+" "+s),h("span",{style:{color:SC[s],fontWeight:700}},Math.round(d.c/d.t*100)+"%")))),
+wt.length>0&&h("div",{style:{textAlign:"left",backgroundColor:"#F76F6F11",border:"1px solid #F76F6F22",borderRadius:8,padding:"8px 10px",marginBottom:10}},h("div",{style:{fontSize:11,fontWeight:700,color:"#F76F6F",marginBottom:4}},"\uD83D\uDD34 Review:"),h("div",{style:{display:"flex",flexWrap:"wrap",gap:4}},wt.map((t,i)=>h("span",{key:i,style:{fontSize:10,padding:"2px 6px",borderRadius:4,backgroundColor:"#F76F6F22",color:"#F76F6F"}},t)))),
+h("div",{style:{display:"flex",gap:7,marginTop:12}},oa&&h("button",{className:"btn",onClick:oa,style:{flex:1}},"Again"),or&&ms.length>0&&h("button",{className:"btn",onClick:or,style:{flex:1,backgroundColor:"#F76F6F"}},"Crush Weak"),h("button",{className:"btn2",onClick:oh,style:{flex:1}},"Home"))));}
 
-// Quiz Engine
-function QuizEngine({questions,onDone,sColor}){
-  const [cur,setCur]=useState(0),[sel,setSel]=useState(null),[show,setShow]=useState(false),[res,setRes]=useState([]),[calc,setCalc]=useState(false);
-  const q=questions[cur];if(!q)return null;
-  const isMath=q.section==="Math";
-  const answer=i=>{if(sel!==null)return;setSel(i);setShow(true);setRes(p=>[...p,{...q,userAnswer:i,correct:i===q.correctIndex}]);};
-  const next=()=>{if(cur+1>=questions.length){onDone(res);return;}setCur(c=>c+1);setSel(null);setShow(false);};
-  const cl=sColor||SC[q.section];
-  return e("div",{id:"root"},
-    e("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:4}},
-      e("button",{className:"back",onClick:()=>onDone(res,true)},"✕"),
-      e("span",{style:{color:"#888",fontSize:12,fontWeight:600}},(cur+1)+"/"+questions.length),
-      e("div",{style:{display:"flex",gap:5,alignItems:"center"}},
-        isMath&&e("button",{onClick:()=>setCalc(!calc),style:{background:"none",border:"1px solid #444",borderRadius:5,padding:"2px 6px",fontSize:10,color:"#F7A94F",cursor:"pointer"}},"🔢"),
-        e("span",{style:{fontSize:10,fontWeight:600,padding:"2px 7px",borderRadius:12,backgroundColor:SC[q.section]+"22",color:SC[q.section]}},SI[q.section]))),
-    e("div",{className:"prog"},e("div",{className:"prog-in",style:{width:((cur+1)/questions.length*100)+"%",backgroundColor:cl}})),
-    e("div",{className:"card"},
-      e("div",{style:{fontSize:10,color:"#888",textTransform:"uppercase",letterSpacing:"0.5px",marginBottom:3}},q.topic),
-      e("p",{style:{fontSize:15,lineHeight:1.6,color:"#e0e0e0",margin:"0 0 14px",fontWeight:500}},q.question),
-      e("div",{style:{display:"flex",flexDirection:"column",gap:6}},
-        q.options.map((opt,i)=>{
-          let bg="transparent",bdr="#333",c2="#e0e0e0";
-          if(sel!==null){if(i===q.correctIndex){bg="#4FCF7F15";bdr="#4FCF7F";c2="#4FCF7F";}else if(i===sel){bg="#F76F6F15";bdr="#F76F6F";c2="#F76F6F";}}
-          return e("button",{key:i,className:"opt",onClick:()=>answer(i),disabled:sel!==null,style:{backgroundColor:bg,borderColor:bdr,color:c2}},
-            e("span",{className:"opt-let",style:{borderColor:bdr,color:bdr}},String.fromCharCode(65+i)),opt);
-        })),
-      show&&e("div",{style:{backgroundColor:"#1a2a1a",border:"1px solid #4FCF7F33",borderRadius:8,padding:"9px 11px",marginTop:9,fontSize:12,lineHeight:1.6,color:"#bbb"}},"💡 "+q.explanation),
-      sel!==null&&e("button",{className:"btn",onClick:next,style:{width:"100%",marginTop:9}},cur+1>=questions.length?"See Results":"Next →")),
-    calc&&e(Calc,{onClose:()=>setCalc(false)}));
-}
+function App(){const[sc,sS]=S("home"),[st,sSt]=S(DS());E(()=>{sSt(ld());},[]);
+const up=C(ns=>{sSt(ns);sv(ns);},[]);
+const rc=C(rs=>{const ns=JSON.parse(JSON.stringify(st));ns.tq+=rs.length;ns.tc+=rs.filter(r=>r.correct).length;
+rs.forEach(r=>{const s=ns.sec[r.section];s.a++;if(r.correct)s.c++;if(!s.t)s.t={};if(!s.t[r.topic])s.t[r.topic]={a:0,c:0};s.t[r.topic].a++;if(r.correct)s.t[r.topic].c++;});
+const td=new Date().toDateString();if(st.ld!==td){const y=new Date();y.setDate(y.getDate()-1);ns.sk=st.ld===y.toDateString()?st.sk+1:1;}ns.ld=td;ns.h=(ns.h||[]);ns.h.push({d:Date.now(),t:rs.length,c:rs.filter(r=>r.correct).length});up(ns);},[st,up]);
+const go=s=>sS(s),P={st,up,rc,go};
+return h("div",null,sc==="home"&&h(Hm,P),sc==="quiz"&&h(Qz,P),sc==="review"&&h(SR,P),sc==="test"&&h(TT,P),sc==="mastery"&&h(MM,P));}
 
-// Results
-function Results({results,onAgain,onHome,onReview,title}){
-  const correct=results.filter(r=>r.correct).length;
-  const pct=results.length>0?Math.round(correct/results.length*100):0;
-  const bySec={};results.forEach(r=>{if(!bySec[r.section])bySec[r.section]={t:0,c:0};bySec[r.section].t++;if(r.correct)bySec[r.section].c++;});
-  const missed=results.filter(r=>!r.correct);
-  const weakTopics=[...new Set(missed.map(r=>r.topic))];
-  return e("div",{id:"root"},
-    e("div",{className:"card",style:{textAlign:"center"}},
-      e("div",{style:{fontSize:48,marginBottom:4}},pct>=80?"🎉":pct>=60?"👍":"💪"),
-      title&&e("div",{style:{fontSize:11,color:"#888",marginBottom:3}},title),
-      e(Ring,{pct,size:80,stroke:7}),
-      e("h2",{style:{margin:"6px 0 2px",fontSize:22,fontWeight:800}},correct+" / "+results.length+" Correct"),
-      e("p",{style:{color:"#888",fontSize:12,marginBottom:12}},pct>=80?"Excellent!":pct>=60?"Review what you missed.":"Keep going — every round builds strength."),
-      Object.keys(bySec).length>1&&e("div",{style:{textAlign:"left",marginBottom:10}},Object.entries(bySec).map(([sec,d])=>e("div",{key:sec,style:{display:"flex",justifyContent:"space-between",padding:"5px 0",borderBottom:"1px solid #1e1e22",fontSize:12}},e("span",null,SI[sec]+" "+sec),e("span",{style:{color:SC[sec],fontWeight:700}},Math.round(d.c/d.t*100)+"%")))),
-      weakTopics.length>0&&e("div",{style:{textAlign:"left",backgroundColor:"#F76F6F11",border:"1px solid #F76F6F22",borderRadius:8,padding:"8px 10px",marginBottom:10}},
-        e("div",{style:{fontSize:11,fontWeight:700,color:"#F76F6F",marginBottom:4}},"🔴 Topics to revisit:"),
-        e("div",{style:{display:"flex",flexWrap:"wrap",gap:4}},weakTopics.map((t,i)=>e("span",{key:i,style:{fontSize:10,padding:"2px 6px",borderRadius:4,backgroundColor:"#F76F6F22",color:"#F76F6F",border:"1px solid #F76F6F33"}},t)))),
-      e("div",{style:{display:"flex",gap:7,marginTop:12}},
-        onAgain&&e("button",{className:"btn",onClick:onAgain,style:{flex:1}},"Again"),
-        onReview&&missed.length>0&&e("button",{className:"btn",onClick:onReview,style:{flex:1,backgroundColor:"#F76F6F"}},"Crush Weak Spots"),
-        e("button",{className:"btn2",onClick:onHome,style:{flex:1}},"Home"))));
-}
+function Hm({st,go}){const tp=st.tq>0?Math.round(st.tc/st.tq*100):0,m=gm(st),wk=m.filter(x=>x.status==="weak"),sg=m.filter(x=>x.status==="strong"),sa=QS.filter(q=>q.sata).length;
+return h("div",{id:"root"},h("div",{style:{textAlign:"center",padding:"24px 0 12px"}},h("div",{style:{fontSize:44}},"\uD83E\uDE7A"),h("h1",{className:"hero"},"Corey's TEAS Prep"),h("p",{style:{color:"#666",fontSize:12,margin:"4px 0"}},QS.length+" exam-level Qs \u00B7 "+sa+" SATA \u00B7 2026 high-yield")),
+st.tq>0&&h("div",{style:{display:"flex",justifyContent:"space-around",alignItems:"center",padding:"10px",backgroundColor:"#141418",borderRadius:12,marginBottom:14,flexWrap:"wrap",gap:8}},h(Rg,{pct:tp,size:56,stroke:5,label:"Overall"}),h("div",{style:{textAlign:"center"}},h("div",{style:{fontSize:18,fontWeight:800}},st.tq),h("div",{style:{fontSize:8,color:"#666"}},"DONE")),h("div",{style:{textAlign:"center"}},h("div",{style:{fontSize:18,fontWeight:800}},st.sk),h("div",{style:{fontSize:8,color:"#666"}},"STREAK")),wk.length>0&&h("div",{style:{textAlign:"center"}},h("div",{style:{fontSize:18,fontWeight:800,color:"#F76F6F"}},wk.length),h("div",{style:{fontSize:8,color:"#666"}},"WEAK")),h("div",{style:{textAlign:"center"}},h("div",{style:{fontSize:18,fontWeight:800,color:"#4FCF7F"}},sg.length),h("div",{style:{fontSize:8,color:"#666"}},"MASTERED"))),
+h("div",{className:"grid"},[{k:"quiz",i:"\u26A1",t:"Practice",d:"By section",c:"#4F9CF7"},{k:"review",i:"\uD83E\uDDE0",t:"Smart Review",d:"Crushes weak spots",c:"#F76F6F"},{k:"test",i:"\u23F1\uFE0F",t:"Exam Sim",d:"Real TEAS timing",c:"#F7A94F"},{k:"mastery",i:"\uD83D\uDCCA",t:"Mastery Map",d:"Visual progress",c:"#4FCF7F"}].map(m=>h("button",{key:m.k,className:"mcard",onClick:()=>go(m.k),style:{borderColor:m.c+"33"}},h("span",{style:{fontSize:26}},m.i),h("h3",{style:{margin:0,fontSize:13,fontWeight:700,color:m.c}},m.t),h("p",{style:{margin:0,fontSize:10,color:"#666"}},m.d)))),
+h("div",{className:"card"},h("div",{style:{display:"flex",justifyContent:"space-around",flexWrap:"wrap",gap:8}},SN.map(s=>{const x=st.sec[s];return h(Rg,{key:s,pct:x.a>0?Math.round(x.c/x.a*100):-1,size:52,stroke:5,color:SC[s],label:s.split(" ")[0],sub:EX[s].q+"Q"});}))),
+wk.length>0&&h("div",{className:"card",style:{marginTop:10,borderColor:"#F76F6F22"}},h("div",{style:{fontSize:12,fontWeight:700,color:"#F76F6F",marginBottom:6}},"\uD83D\uDD34 "+wk.length+" weak topics"),h("div",{style:{display:"flex",flexWrap:"wrap",gap:3}},wk.slice(0,8).map((w,i)=>h("span",{key:i,style:{fontSize:10,padding:"2px 6px",borderRadius:4,backgroundColor:"#F76F6F22",color:"#F76F6F"}},w.topic+" "+w.pct+"%"))),h("button",{className:"btn",onClick:()=>go("review"),style:{width:"100%",marginTop:8,backgroundColor:"#F76F6F",fontSize:12}},"Smart Review \u2192")),
+h("div",{style:{marginTop:12,padding:"10px",backgroundColor:"#141418",borderRadius:10,border:"1px solid #1e1e22",fontSize:11,color:"#888",lineHeight:1.6}},"\uD83D\uDCCC ",h("strong",null,"2026:")," Balancing equations, latent heat, macromolecule monomers, endocrine hormones, semicolons vs colons, table-based ratios. Watch Nurse Cheung on YouTube."));}
 
-// MAIN APP
-function App(){
-  const [screen,setScreen]=useState("home");
-  const [stats,setStats]=useState(DS());
-  useEffect(()=>{setStats(loadStats());},[]);
-  const update=useCallback(ns=>{setStats(ns);saveStats(ns);},[]);
-  const record=useCallback(results=>{
-    const ns=JSON.parse(JSON.stringify(stats));
-    ns.totalQuestions+=results.length;ns.totalCorrect+=results.filter(r=>r.correct).length;
-    results.forEach(r=>{const sec=ns.sections[r.section];sec.asked++;if(r.correct)sec.correct++;if(!sec.topics)sec.topics={};if(!sec.topics[r.topic])sec.topics[r.topic]={asked:0,correct:0};sec.topics[r.topic].asked++;if(r.correct)sec.topics[r.topic].correct++;});
-    const today=new Date().toDateString();if(stats.lastStudyDate!==today){const y=new Date();y.setDate(y.getDate()-1);ns.streak=stats.lastStudyDate===y.toDateString()?stats.streak+1:1;}ns.lastStudyDate=today;
-    ns.quizHistory=(ns.quizHistory||[]);ns.quizHistory.push({date:Date.now(),total:results.length,correct:results.filter(r=>r.correct).length});
-    update(ns);
-  },[stats,update]);
-  const go=s=>setScreen(s);
-  const P={stats,update,record,go};
-  return e("div",null,
-    screen==="home"&&e(Home,P),screen==="quiz"&&e(QuizScreen,P),screen==="review"&&e(SmartReview,P),
-    screen==="test"&&e(TimedTest,P),screen==="mastery"&&e(MasteryMap,P));
-}
+function Qz({st,rc,go}){const[ph,sP]=S("pick"),[qs,sQ]=S([]),[rs,sR]=S([]),[cn,sN]=S(10),[se,sE]=S("All");
+const run=s=>{const p=s==="All"?QS:QS.filter(q=>q.section===s);sQ(sh(p).slice(0,Math.min(cn,p.length)));sE(s);sP("active");};
+const dn=(r,x)=>{if(r.length>0){rc(r);sR(r);}sP(x?"pick":"done");};
+if(ph==="done")return h(Res,{results:rs,onAgain:()=>run(se),onHome:()=>go("home"),onReview:()=>go("review"),title:"Practice"});
+if(ph==="active")return h(QE,{questions:qs,onDone:dn});
+return h("div",{id:"root"},h("button",{className:"back",onClick:()=>go("home")},"\u2190 Home"),h("h2",{className:"title"},"\u26A1 Practice Quiz"),
+h("div",{style:{display:"flex",gap:5,marginBottom:12,flexWrap:"wrap",justifyContent:"center"}},[5,10,15,20].map(n=>h("button",{key:n,onClick:()=>sN(n),style:{padding:"5px 12px",borderRadius:14,border:"1px solid "+(cn===n?"#4F9CF7":"#333"),backgroundColor:cn===n?"#4F9CF722":"transparent",color:cn===n?"#4F9CF7":"#888",fontSize:11,fontWeight:600}},n+"Q"))),
+h("div",{style:{display:"flex",flexDirection:"column",gap:6}},h("button",{className:"pick",onClick:()=>run("All"),style:{borderColor:"#555"}},h("span",{style:{fontSize:20}},"\uD83C\uDFAF"),h("span",{style:{flex:1,textAlign:"left",fontWeight:600,fontSize:13}},"All"),h("span",{style:{fontSize:10,color:"#666"}},QS.length+"Q")),
+SN.map(s=>{const ct=QS.filter(q=>q.section===s).length,x=st.sec[s],p=x.a>0?Math.round(x.c/x.a*100):null;
+return h("button",{key:s,className:"pick",onClick:()=>run(s),style:{borderColor:SC[s]+"44"}},h("span",{style:{fontSize:20}},SI[s]),h("span",{style:{flex:1,textAlign:"left",fontWeight:600,fontSize:13}},s),h("span",{style:{fontSize:10,color:"#666"}},ct+"Q"),p!==null&&h(Rg,{pct:p,size:32,stroke:3,color:SC[s]}));})));}
 
-// HOME
-function Home({stats,go}){
-  const tp=stats.totalQuestions>0?Math.round(stats.totalCorrect/stats.totalQuestions*100):0;
-  const m=getTopicMastery(stats),weak=m.filter(x=>x.status==="weak"),strong=m.filter(x=>x.status==="strong");
-  return e("div",{id:"root"},
-    e("div",{style:{textAlign:"center",padding:"28px 0 14px"}},
-      e("div",{style:{fontSize:44}},"🩺"),
-      e("h1",{className:"hero"},"Corey's TEAS Prep"),
-      e("p",{style:{color:"#666",fontSize:13,margin:"4px 0 0"}},QUESTIONS.length+" questions · Smart mastery tracking")),
-    stats.totalQuestions>0&&e("div",{style:{display:"flex",justifyContent:"space-around",alignItems:"center",padding:"10px 14px",backgroundColor:"#141418",borderRadius:12,marginBottom:14,flexWrap:"wrap",gap:8}},
-      e(Ring,{pct:tp,size:56,stroke:5,label:"Overall"}),
-      e("div",{style:{display:"flex",flexDirection:"column",alignItems:"center",gap:1}},e("span",{style:{fontSize:18,fontWeight:800}},stats.totalQuestions),e("span",{style:{fontSize:8,color:"#666",textTransform:"uppercase"}},"Practiced")),
-      e("div",{style:{display:"flex",flexDirection:"column",alignItems:"center",gap:1}},e("span",{style:{fontSize:18,fontWeight:800}},stats.streak),e("span",{style:{fontSize:8,color:"#666",textTransform:"uppercase"}},"Streak")),
-      weak.length>0&&e("div",{style:{display:"flex",flexDirection:"column",alignItems:"center",gap:1}},e("span",{style:{fontSize:18,fontWeight:800,color:"#F76F6F"}},weak.length),e("span",{style:{fontSize:8,color:"#666",textTransform:"uppercase"}},"Weak")),
-      e("div",{style:{display:"flex",flexDirection:"column",alignItems:"center",gap:1}},e("span",{style:{fontSize:18,fontWeight:800,color:"#4FCF7F"}},strong.length),e("span",{style:{fontSize:8,color:"#666",textTransform:"uppercase"}},"Mastered"))),
-    e("div",{className:"grid"},
-      [{k:"quiz",i:"⚡",t:"Practice Quiz",d:"By section or all",c:"#4F9CF7"},{k:"review",i:"🧠",t:"Smart Review",d:"Crushes weak spots",c:"#F76F6F"},{k:"test",i:"⏱️",t:"Exam Sim",d:"Real TEAS timing",c:"#F7A94F"},{k:"mastery",i:"📊",t:"Mastery Map",d:"Visual progress",c:"#4FCF7F"}].map(m=>
-        e("button",{key:m.k,className:"mcard",onClick:()=>go(m.k),style:{borderColor:m.c+"33"}},
-          e("span",{style:{fontSize:28}},m.i),e("h3",{style:{margin:0,fontSize:13,fontWeight:700,color:m.c}},m.t),e("p",{style:{margin:0,fontSize:10,color:"#666"}},m.d)))),
-    e("div",{className:"card"},
-      e("h3",{style:{margin:"0 0 10px",fontSize:12,color:"#888",fontWeight:600}},"Section Progress"),
-      e("div",{style:{display:"flex",justifyContent:"space-around",flexWrap:"wrap",gap:8}},
-        SN.map(sec=>{const s=stats.sections[sec];const pct=s.asked>0?Math.round(s.correct/s.asked*100):-1;
-          return e(Ring,{key:sec,pct,size:52,stroke:5,color:SC[sec],label:sec.split(" ")[0],sub:EX[sec].q+"Q"});}))),
-    weak.length>0&&e("div",{className:"card",style:{marginTop:10,borderColor:"#F76F6F22"}},
-      e("h3",{style:{margin:"0 0 6px",fontSize:12,fontWeight:700,color:"#F76F6F"}},"🔴 "+weak.length+" Weak Topic"+(weak.length>1?"s":"")+" — Smart Review targets these"),
-      e("div",{style:{display:"flex",flexWrap:"wrap",gap:3}},weak.slice(0,10).map((w,i)=>e("span",{key:i,style:{fontSize:10,padding:"2px 6px",borderRadius:4,backgroundColor:"#F76F6F22",color:"#F76F6F",border:"1px solid #F76F6F33"}},w.topic+" "+w.pct+"%"))),
-      e("button",{className:"btn",onClick:()=>go("review"),style:{width:"100%",marginTop:8,backgroundColor:"#F76F6F",fontSize:12}},"Start Smart Review →")));
-}
+function SR({st,rc,go}){const[ph,sP]=S("intro"),[qs,sQ]=S([]),[rs,sR]=S([]);
+const m=gm(st),wk=m.filter(x=>x.status==="weak").sort((a,b)=>a.pct-b.pct),nw=m.filter(x=>x.status==="new");
+const run=()=>{sQ(gwq(st,20));sP("active");};
+const dn=(r,x)=>{if(r.length>0){rc(r);sR(r);}sP(x?"intro":"done");};
+if(ph==="done")return h(Res,{results:rs,onAgain:run,onHome:()=>go("home"),onReview:run,title:"\uD83E\uDDE0 Smart Review"});
+if(ph==="active")return h(QE,{questions:qs,sColor:"#F76F6F",onDone:dn});
+return h("div",{id:"root"},h("button",{className:"back",onClick:()=>go("home")},"\u2190 Home"),h("h2",{className:"title"},"\uD83E\uDDE0 Smart Review"),
+h("p",{style:{textAlign:"center",color:"#666",margin:"0 0 14px",fontSize:12}},"20Qs targeting weakest. Weak=4Qs, New=3Qs. Until 85%+."),
+h("div",{className:"card",style:{textAlign:"center",marginBottom:12}},(wk.length>0||nw.length>0)?[h("p",{key:"c",style:{color:"#e0e0e0",fontSize:14,fontWeight:600,margin:"0 0 10px"}},"\uD83D\uDD34 "+wk.length+" weak \u00B7 "+nw.length+" untested"),h("div",{key:"b",style:{textAlign:"left",marginBottom:12}},wk.slice(0,5).map((w,i)=>h(MB,{key:i,topic:w.topic,pct:w.pct,asked:w.asked})),nw.slice(0,3).map((n,i)=>h(MB,{key:"n"+i,topic:n.topic,pct:-1,asked:0})))]:[h("p",{key:"c",style:{color:"#4FCF7F",fontSize:14,fontWeight:600}},"\uD83C\uDFC6 All topics 70%+!")],h("button",{className:"btn",onClick:run,style:{width:"100%",backgroundColor:"#F76F6F"}},"Start")));}
 
-// QUIZ
-function QuizScreen({stats,record,go}){
-  const [phase,setPhase]=useState("pick"),[qs,setQs]=useState([]),[res,setRes]=useState([]),[cnt,setCnt]=useState(10),[sec,setSec]=useState("All");
-  const start=s=>{const pool=s==="All"?QUESTIONS:QUESTIONS.filter(q=>q.section===s);setQs(shuffle(pool).slice(0,Math.min(cnt,pool.length)));setSec(s);setPhase("active");};
-  const done=(r,x)=>{if(r.length>0){record(r);setRes(r);}setPhase(x?"pick":"done");};
-  if(phase==="done")return e(Results,{results:res,onAgain:()=>start(sec),onHome:()=>go("home"),onReview:()=>go("review"),title:"Practice Quiz"});
-  if(phase==="active")return e(QuizEngine,{questions:qs,onDone:done});
-  return e("div",{id:"root"},
-    e("button",{className:"back",onClick:()=>go("home")},"← Home"),
-    e("h2",{className:"title"},"⚡ Practice Quiz"),
-    e("div",{style:{display:"flex",gap:5,marginBottom:12,flexWrap:"wrap",justifyContent:"center"}},
-      [5,10,15,20,30].map(n=>e("button",{key:n,onClick:()=>setCnt(n),style:{padding:"5px 12px",borderRadius:14,border:"1px solid "+(cnt===n?"#4F9CF7":"#333"),backgroundColor:cnt===n?"#4F9CF722":"transparent",color:cnt===n?"#4F9CF7":"#888",cursor:"pointer",fontSize:11,fontWeight:600}},n+"Q"))),
-    e("div",{style:{display:"flex",flexDirection:"column",gap:6}},
-      e("button",{className:"pick",onClick:()=>start("All"),style:{borderColor:"#555"}},e("span",{style:{fontSize:20}},"🎯"),e("span",{style:{flex:1,textAlign:"left",fontWeight:600,color:"#e0e0e0",fontSize:13}},"All Sections"),e("span",{style:{fontSize:10,color:"#666"}},QUESTIONS.length+"Q")),
-      SN.map(sc=>{const ct=QUESTIONS.filter(q=>q.section===sc).length;const d=stats.sections[sc];const pct=d.asked>0?Math.round(d.correct/d.asked*100):null;
-        return e("button",{key:sc,className:"pick",onClick:()=>start(sc),style:{borderColor:SC[sc]+"44"}},e("span",{style:{fontSize:20}},SI[sc]),e("span",{style:{flex:1,textAlign:"left",fontWeight:600,color:"#e0e0e0",fontSize:13}},sc),e("span",{style:{fontSize:10,color:"#666"}},ct+"Q"),pct!==null&&e(Ring,{pct,size:32,stroke:3,color:SC[sc]}));})));
-}
+function TT({st,rc,go}){const[ph,sP]=S("setup"),[tt,sT]=S("full"),[qs,sQ]=S([]),[an,sA]=S({}),[cr,sC]=S(0),[tl,sTL]=S(0),[rs,sR]=S([]),[cl,sCl]=S(false);
+const tr=R(null),qr=R([]),ar=R({});
+const run=()=>{let q=[];if(tt==="full"){SN.forEach(s=>{q=q.concat(sh(QS.filter(x=>x.section===s)).slice(0,Math.min(EX[s].q,QS.filter(x=>x.section===s).length)));});q=sh(q);sTL(209*60);}else{q=sh(QS.filter(x=>x.section===tt)).slice(0,Math.min(EX[tt].q,QS.filter(x=>x.section===tt).length));sTL(EX[tt].m*60);}sQ(q);qr.current=q;sA({});ar.current={};sC(0);sP("active");};
+const sub=C(()=>{clearInterval(tr.current);const r=qr.current.map((q,i)=>({...q,ua:ar.current[i]??null,correct:q.sata?false:ar.current[i]===q.correctIndex}));rc(r);sR(r);sP("review");},[rc]);
+E(()=>{if(ph!=="active")return;tr.current=setInterval(()=>{sTL(t=>{if(t<=1){clearInterval(tr.current);sub();return 0;}return t-1;});},1000);return()=>clearInterval(tr.current);},[ph,sub]);
+const ha=i=>{const na={...an,[cr]:i};sA(na);ar.current=na;};
+const fm=s=>Math.floor(s/60)+":"+(s%60).toString().padStart(2,"0");
+if(ph==="review")return h(Res,{results:rs,onAgain:run,onHome:()=>go("home"),onReview:()=>go("review"),title:tt==="full"?"Full Exam":tt});
+if(ph==="setup")return h("div",{id:"root"},h("button",{className:"back",onClick:()=>go("home")},"\u2190 Home"),h("h2",{className:"title"},"\u23F1\uFE0F Exam Sim"),
+h("div",{style:{display:"flex",flexDirection:"column",gap:6,marginBottom:14}},h("button",{className:"pick",onClick:()=>sT("full"),style:{borderColor:tt==="full"?"#F7A94F":"#333"}},h("span",{style:{fontSize:20}},"\uD83D\uDCDD"),h("div",{style:{flex:1,textAlign:"left"}},h("div",{style:{fontWeight:700,fontSize:13}},"Full Exam"),h("div",{style:{fontSize:10,color:"#666"}},"170Q \u00B7 209min"))),SN.map(s=>h("button",{key:s,className:"pick",onClick:()=>sT(s),style:{borderColor:tt===s?SC[s]:"#333"}},h("span",{style:{fontSize:20}},SI[s]),h("div",{style:{flex:1,textAlign:"left"}},h("div",{style:{fontWeight:700,fontSize:13}},s),h("div",{style:{fontSize:10,color:"#666"}},EX[s].q+"Q \u00B7 "+EX[s].m+"min"))))),
+h("button",{className:"btn",onClick:run,style:{width:"100%",padding:"13px",fontSize:15,backgroundColor:"#F7A94F"}},"Start"));
+const q=qs[cr];if(!q)return null;
+return h("div",{id:"root"},h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:3}},h("div",{style:{fontSize:15,fontWeight:800,color:tl<120?"#F76F6F":"#e0e0e0",fontVariantNumeric:"tabular-nums"}},"\u23F1 "+fm(tl)),h("span",{style:{color:"#888",fontSize:11}},(cr+1)+"/"+qs.length),h("span",{style:{fontSize:10,color:"#666"}},Object.keys(an).length+" done")),
+h("div",{className:"prog"},h("div",{className:"prog-in",style:{width:((cr+1)/qs.length*100)+"%",backgroundColor:"#F7A94F"}})),
+h("div",{className:"card"},h("div",{style:{fontSize:10,color:SC[q.section],marginBottom:4}},SI[q.section]+" "+q.topic),h("p",{style:{fontSize:13,lineHeight:1.6,margin:"0 0 12px"}},q.question),
+h("div",{style:{display:"flex",flexDirection:"column",gap:5}},q.options.map((o,i)=>h("button",{key:i,className:"opt",onClick:()=>ha(i),style:{borderColor:an[cr]===i?"#4F9CF7":"#333",backgroundColor:an[cr]===i?"#4F9CF722":"transparent",color:an[cr]===i?"#4F9CF7":"#e0e0e0"}},h("span",{style:{width:22,height:22,borderRadius:6,border:"1.5px solid "+(an[cr]===i?"#4F9CF7":"#555"),display:"flex",alignItems:"center",justifyContent:"center",fontSize:10,fontWeight:700,flexShrink:0}},String.fromCharCode(65+i)),o))),
+h("div",{style:{display:"flex",justifyContent:"space-between",gap:7,marginTop:10}},h("button",{className:"btn2",onClick:()=>sC(c=>Math.max(0,c-1)),disabled:cr===0},"\u2190"),cr<qs.length-1?h("button",{className:"btn",onClick:()=>sC(c=>c+1)},"Next \u2192"):h("button",{className:"btn",onClick:sub,style:{backgroundColor:"#F7A94F"}},"Submit"))),
+cl&&h(Clc,{onClose:()=>sCl(false)}));}
 
-// SMART REVIEW
-function SmartReview({stats,record,go}){
-  const [phase,setPhase]=useState("intro"),[qs,setQs]=useState([]),[res,setRes]=useState([]);
-  const m=getTopicMastery(stats),weak=m.filter(x=>x.status==="weak").sort((a,b)=>a.pct-b.pct),nw=m.filter(x=>x.status==="new");
-  const start=()=>{setQs(getWeakQuestions(stats,20));setPhase("active");};
-  const done=(r,x)=>{if(r.length>0){record(r);setRes(r);}setPhase(x?"intro":"done");};
-  if(phase==="done")return e(Results,{results:res,onAgain:start,onHome:()=>go("home"),onReview:start,title:"🧠 Smart Review"});
-  if(phase==="active")return e(QuizEngine,{questions:qs,sColor:"#F76F6F",onDone:done});
-  return e("div",{id:"root"},
-    e("button",{className:"back",onClick:()=>go("home")},"← Home"),
-    e("h2",{className:"title"},"🧠 Smart Review"),
-    e("p",{style:{textAlign:"center",color:"#666",margin:"0 0 14px",fontSize:12}},"Targets weak & untested topics until mastery (85%+)"),
-    e("div",{className:"card",style:{textAlign:"center",marginBottom:12}},
-      (weak.length>0||nw.length>0)?[
-        e("div",{key:"ic",style:{fontSize:32,marginBottom:4}},"🔴"),
-        e("p",{key:"ct",style:{color:"#e0e0e0",fontSize:14,fontWeight:600,margin:"0 0 4px"}},weak.length+" weak · "+nw.length+" untested"),
-        e("p",{key:"ds",style:{color:"#888",fontSize:11,margin:"0 0 12px"}},"20 questions weighted toward weakest areas"),
-        e("div",{key:"bars",style:{textAlign:"left",marginBottom:12}},
-          weak.slice(0,6).map((w,i)=>e(MasteryBar,{key:i,topic:w.topic,pct:w.pct,asked:w.asked})),
-          nw.slice(0,3).map((n,i)=>e(MasteryBar,{key:"n"+i,topic:n.topic,pct:-1,asked:0})))
-      ]:[e("div",{key:"ic",style:{fontSize:32,marginBottom:4}},"🏆"),e("p",{key:"ct",style:{color:"#4FCF7F",fontSize:14,fontWeight:600}},"All topics at 70%+!")],
-      e("button",{className:"btn",onClick:start,style:{width:"100%",backgroundColor:"#F76F6F"}},"Start Smart Review")),
-    e("div",{style:{fontSize:10,color:"#555",textAlign:"center",lineHeight:1.6}},"Weak topics get 4 Qs each. New get 3. Repeats until 85%+."));
-}
+function MM({st,up,go}){const tp=st.tq>0?Math.round(st.tc/st.tq*100):0,m=gm(st),wk=m.filter(x=>x.status==="weak"),sg=m.filter(x=>x.status==="strong"),ok=m.filter(x=>x.status==="ok"),nw=m.filter(x=>x.status==="new");
+return h("div",{id:"root"},h("button",{className:"back",onClick:()=>go("home")},"\u2190 Home"),h("h2",{className:"title"},"\uD83D\uDCCA Mastery Map"),
+h("div",{style:{display:"flex",justifyContent:"space-around",alignItems:"center",padding:"12px 0",marginBottom:10}},h(Rg,{pct:tp,size:72,stroke:6,label:"Overall"}),h("div",{style:{display:"flex",flexDirection:"column",gap:3}},[["#4FCF7F",sg.length,"Mastered"],["#F7A94F",ok.length,"OK"],["#F76F6F",wk.length,"Weak"],["#333",nw.length,"New"]].map(([c,n,l],i)=>h("div",{key:i,style:{display:"flex",alignItems:"center",gap:6}},h("span",{style:{width:10,height:10,borderRadius:3,backgroundColor:c}}),h("span",{style:{fontSize:11,color:"#ccc"}},n+" "+l))))),
+h("div",{className:"card",style:{marginBottom:10}},h("div",{style:{display:"flex",justifyContent:"space-around",flexWrap:"wrap"}},SN.map(s=>{const x=st.sec[s];return h(Rg,{key:s,pct:x.a>0?Math.round(x.c/x.a*100):-1,size:56,stroke:5,color:SC[s],label:s.split(" ")[0]});}))),
+SN.map(s=>h("div",{key:s,className:"card",style:{marginBottom:10,borderColor:SC[s]+"22"}},h("h3",{style:{margin:"0 0 8px",fontSize:12,fontWeight:700,color:SC[s]}},SI[s]+" "+s),m.filter(x=>x.section===s).map((t,i)=>h(MB,{key:i,topic:t.topic,pct:t.pct,asked:t.asked})))),
+wk.length>0&&h("button",{className:"btn",onClick:()=>go("review"),style:{width:"100%",backgroundColor:"#F76F6F",marginBottom:8}},"\uD83E\uDDE0 Crush "+wk.length+" Weak"),
+h("button",{className:"btn2",onClick:()=>{if(confirm("Reset?"))up(DS());},style:{width:"100%",maxWidth:240,margin:"14px auto",display:"block",color:"#F76F6F",borderColor:"#F76F6F33",fontSize:11}},"Reset"));}
 
-// TIMED TEST
-function TimedTest({stats,record,go}){
-  const [phase,setPhase]=useState("setup"),[tt,setTt]=useState("full"),[qs,setQs]=useState([]),[ans,setAns]=useState({}),[cur,setCur]=useState(0),[tl,setTl]=useState(0),[res,setRes]=useState([]),[calc,setCalc]=useState(false);
-  const tr=useRef(null),qr=useRef([]),ar=useRef({});
-  const startTest=()=>{
-    let q=[];
-    if(tt==="full"){SN.forEach(s=>{q=q.concat(shuffle(QUESTIONS.filter(x=>x.section===s)).slice(0,EX[s].q));});q=shuffle(q);setTl(209*60);}
-    else{q=shuffle(QUESTIONS.filter(x=>x.section===tt)).slice(0,EX[tt].q);setTl(EX[tt].m*60);}
-    setQs(q);qr.current=q;setAns({});ar.current={};setCur(0);setPhase("active");
-  };
-  const submit=useCallback(()=>{clearInterval(tr.current);const r=qr.current.map((q,i)=>({...q,userAnswer:ar.current[i]??null,correct:ar.current[i]===q.correctIndex}));record(r);setRes(r);setPhase("review");},[record]);
-  useEffect(()=>{if(phase!=="active")return;tr.current=setInterval(()=>{setTl(t=>{if(t<=1){clearInterval(tr.current);submit();return 0;}return t-1;});},1000);return()=>clearInterval(tr.current);},[phase,submit]);
-  const ha=i=>{const na={...ans,[cur]:i};setAns(na);ar.current=na;};
-  const fmt=s=>Math.floor(s/60)+":"+(s%60).toString().padStart(2,"0");
-  if(phase==="review")return e(Results,{results:res,onAgain:startTest,onHome:()=>go("home"),onReview:()=>go("review"),title:tt==="full"?"Full TEAS Exam":tt});
-  if(phase==="setup")return e("div",{id:"root"},
-    e("button",{className:"back",onClick:()=>go("home")},"← Home"),
-    e("h2",{className:"title"},"⏱️ Exam Simulation"),
-    e("div",{style:{display:"flex",flexDirection:"column",gap:6,marginBottom:14}},
-      e("button",{className:"pick",onClick:()=>setTt("full"),style:{borderColor:tt==="full"?"#F7A94F":"#333",backgroundColor:tt==="full"?"#F7A94F11":"transparent"}},e("span",{style:{fontSize:20}},"📝"),e("div",{style:{flex:1,textAlign:"left"}},e("div",{style:{fontWeight:700,color:"#e0e0e0",fontSize:13}},"Full Exam"),e("div",{style:{fontSize:10,color:"#666"}},"170Q · 209min"))),
-      SN.map(s=>e("button",{key:s,className:"pick",onClick:()=>setTt(s),style:{borderColor:tt===s?SC[s]:"#333",backgroundColor:tt===s?SC[s]+"11":"transparent"}},e("span",{style:{fontSize:20}},SI[s]),e("div",{style:{flex:1,textAlign:"left"}},e("div",{style:{fontWeight:700,color:"#e0e0e0",fontSize:13}},s),e("div",{style:{fontSize:10,color:"#666"}},EX[s].q+"Q · "+EX[s].m+"min"))))),
-    e("div",{className:"card",style:{fontSize:11,color:"#888",lineHeight:1.6,marginBottom:12}},"📌 Treat every Q as scored · 🔢 Calculator on Math · ⏰ Real timing"),
-    e("button",{className:"btn",onClick:startTest,style:{width:"100%",padding:"13px",fontSize:15,backgroundColor:"#F7A94F"}},"Start Test"));
-  // Active
-  const q=qs[cur];if(!q)return null;const ad=Object.keys(ans).length;
-  return e("div",{id:"root"},
-    e("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:3}},
-      e("div",{style:{fontSize:15,fontWeight:800,color:tl<120?"#F76F6F":"#e0e0e0",fontVariantNumeric:"tabular-nums"}},"⏱️ "+fmt(tl)),
-      e("span",{style:{color:"#888",fontSize:11}},(cur+1)+"/"+qs.length),
-      e("div",{style:{display:"flex",gap:5,alignItems:"center"}},
-        q.section==="Math"&&e("button",{onClick:()=>setCalc(!calc),style:{background:"none",border:"1px solid #444",borderRadius:5,padding:"1px 5px",fontSize:9,color:"#F7A94F",cursor:"pointer"}},"🔢"),
-        e("span",{style:{fontSize:10,color:"#666"}},ad+" done"))),
-    e("div",{className:"prog"},e("div",{className:"prog-in",style:{width:((cur+1)/qs.length*100)+"%",backgroundColor:"#F7A94F"}})),
-    e("div",{className:"card"},
-      e("div",{style:{display:"flex",gap:4,marginBottom:4}},e("span",{style:{fontSize:10,fontWeight:600,padding:"2px 6px",borderRadius:10,backgroundColor:SC[q.section]+"22",color:SC[q.section]}},SI[q.section]),e("span",{style:{fontSize:9,color:"#666",padding:"2px"}},q.topic)),
-      e("p",{style:{fontSize:14,lineHeight:1.6,color:"#e0e0e0",margin:"3px 0 12px",fontWeight:500}},q.question),
-      e("div",{style:{display:"flex",flexDirection:"column",gap:5}},
-        q.options.map((opt,i)=>e("button",{key:i,className:"opt",onClick:()=>ha(i),style:{borderColor:ans[cur]===i?"#4F9CF7":"#333",backgroundColor:ans[cur]===i?"#4F9CF722":"transparent",color:ans[cur]===i?"#4F9CF7":"#e0e0e0"}},
-          e("span",{className:"opt-let",style:{borderColor:ans[cur]===i?"#4F9CF7":"#555"}},String.fromCharCode(65+i)),opt))),
-      e("div",{style:{display:"flex",justifyContent:"space-between",gap:7,marginTop:10}},
-        e("button",{className:"btn2",onClick:()=>setCur(c=>Math.max(0,c-1)),disabled:cur===0},"←"),
-        cur<qs.length-1?e("button",{className:"btn",onClick:()=>setCur(c=>c+1)},"Next →"):e("button",{className:"btn",onClick:submit,style:{backgroundColor:"#F7A94F"}},"Submit ("+ad+"/"+qs.length+")")),
-      e("div",{style:{display:"flex",flexWrap:"wrap",gap:2,marginTop:8,justifyContent:"center"}},
-        qs.map((_,i)=>e("button",{key:i,className:"qnav",onClick:()=>setCur(i),style:{backgroundColor:i===cur?"#4F9CF7":ans[i]!==undefined?"#4FCF7F22":"#181818",borderColor:i===cur?"#4F9CF7":ans[i]!==undefined?"#4FCF7F":"#333",color:i===cur?"#fff":ans[i]!==undefined?"#4FCF7F":"#555"}},i+1)))),
-    calc&&e(Calc,{onClose:()=>setCalc(false)}));
-}
-
-// MASTERY MAP
-function MasteryMap({stats,update,go}){
-  const tp=stats.totalQuestions>0?Math.round(stats.totalCorrect/stats.totalQuestions*100):0;
-  const m=getTopicMastery(stats),weak=m.filter(x=>x.status==="weak").sort((a,b)=>a.pct-b.pct),strong=m.filter(x=>x.status==="strong"),ok=m.filter(x=>x.status==="ok"),nw=m.filter(x=>x.status==="new");
-  return e("div",{id:"root"},
-    e("button",{className:"back",onClick:()=>go("home")},"← Home"),
-    e("h2",{className:"title"},"📊 Mastery Map"),
-    e("div",{style:{display:"flex",justifyContent:"space-around",alignItems:"center",padding:"12px 0",marginBottom:10}},
-      e(Ring,{pct:tp,size:72,stroke:6,label:"Overall"}),
-      e("div",{style:{display:"flex",flexDirection:"column",gap:4}},
-        [["#4FCF7F",strong.length,"Mastered (85%+)"],["#F7A94F",ok.length,"OK (70-84%)"],["#F76F6F",weak.length,"Weak (<70%)"],["#333",nw.length,"Not Started"]].map(([c,n,l],i)=>
-          e("div",{key:i,style:{display:"flex",alignItems:"center",gap:6}},e("span",{style:{width:10,height:10,borderRadius:3,backgroundColor:c}}),e("span",{style:{fontSize:11,color:"#ccc"}},n+" "+l))))),
-    e("div",{className:"card",style:{marginBottom:10}},
-      e("h3",{style:{margin:"0 0 10px",fontSize:12,fontWeight:700,color:"#ccc"}},"Section Accuracy"),
-      e("div",{style:{display:"flex",justifyContent:"space-around",flexWrap:"wrap"}},
-        SN.map(sec=>{const s=stats.sections[sec];const pct=s.asked>0?Math.round(s.correct/s.asked*100):-1;
-          return e(Ring,{key:sec,pct,size:60,stroke:5,color:SC[sec],label:sec.length>10?sec.split(" ")[0]:sec,sub:s.asked>0?s.asked+"Q":""});}))),
-    SN.map(sec=>{
-      const topics=m.filter(x=>x.section===sec);
-      return e("div",{key:sec,className:"card",style:{marginBottom:10,borderColor:SC[sec]+"22"}},
-        e("h3",{style:{margin:"0 0 8px",fontSize:12,fontWeight:700,color:SC[sec]}},SI[sec]+" "+sec),
-        topics.map((t,i)=>e(MasteryBar,{key:i,topic:t.topic,pct:t.pct,asked:t.asked})));
-    }),
-    weak.length>0&&e("button",{className:"btn",onClick:()=>go("review"),style:{width:"100%",backgroundColor:"#F76F6F",marginBottom:8}},"🧠 Crush "+weak.length+" Weak Topic"+(weak.length>1?"s":"")),
-    e("button",{className:"btn2",onClick:()=>{if(confirm("Reset all progress?"))update(DS());},style:{width:"100%",maxWidth:240,margin:"14px auto",display:"block",color:"#F76F6F",borderColor:"#F76F6F33",fontSize:11}},"Reset Progress"));
-}
-
-ReactDOM.render(e(App),document.getElementById("root"));
-</script>
-</body>
-</html>
+ReactDOM.render(h(App),document.getElementById("root"));
+</script></body></html>
